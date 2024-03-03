@@ -5,21 +5,21 @@
 class Gobrewtest < Formula
   desc "A completely useless binary; used for testing purposes"
   homepage "https://github.com/dhth/gobrewtest"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.6/gobrewtest_Darwin_arm64.tar.gz"
-      sha256 "9e1b82053dc888594207dd454260a45f5bb4fe2f5348008c14d591341bdbb651"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Darwin_arm64.tar.gz"
+      sha256 "c35cf525823ae30f7e45da6e9e681b2c336c9381c0bd58088133c0d415abb8de"
 
       def install
         bin.install "gobrewtest"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.6/gobrewtest_Darwin_x86_64.tar.gz"
-      sha256 "f5f9e8592b22e3373f537647691aefd36a83bb6ff54c9cef9f483a87b65ced8f"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Darwin_x86_64.tar.gz"
+      sha256 "221eab28b34fe645d11eee64b7f257543458955c6dd95516416afe5fa4fdbf8e"
 
       def install
         bin.install "gobrewtest"
@@ -29,16 +29,16 @@ class Gobrewtest < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.6/gobrewtest_Linux_arm64.tar.gz"
-      sha256 "e78a206a859dbd79e28f48dde6efa490e7e1c3e37df5cb4035d9dae74846fdb3"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Linux_arm64.tar.gz"
+      sha256 "a1e3b032c3761eaa7e74bf74061c951e77ba568393f1bdced748a0017b4d23f8"
 
       def install
         bin.install "gobrewtest"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.6/gobrewtest_Linux_x86_64.tar.gz"
-      sha256 "481c869554ee7144c444e6719c38b3595615f644eb451e887766a85b6a1665b1"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Linux_x86_64.tar.gz"
+      sha256 "25a0a92d7694b4591bb34b699704e7a9ca7975c48d5a862b058d073fd71663a1"
 
       def install
         bin.install "gobrewtest"
