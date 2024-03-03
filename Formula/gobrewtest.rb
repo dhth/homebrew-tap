@@ -5,21 +5,21 @@
 class Gobrewtest < Formula
   desc "A completely useless binary; used for testing purposes"
   homepage "https://github.com/dhth/gobrewtest"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Darwin_arm64.tar.gz"
-      sha256 "c35cf525823ae30f7e45da6e9e681b2c336c9381c0bd58088133c0d415abb8de"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.8/gobrewtest_0.1.8_darwin_amd64.tar.gz"
+      sha256 "0257a38fecf49f1ff02a8e1879d6635412d8f894d5c00d14a1824d51fac83f27"
 
       def install
         bin.install "gobrewtest"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Darwin_x86_64.tar.gz"
-      sha256 "221eab28b34fe645d11eee64b7f257543458955c6dd95516416afe5fa4fdbf8e"
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.8/gobrewtest_0.1.8_darwin_arm64.tar.gz"
+      sha256 "019619741fffdd314cf78304cee61d4faeb75fe7763e6ef936720654ac2cb434"
 
       def install
         bin.install "gobrewtest"
@@ -29,16 +29,16 @@ class Gobrewtest < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Linux_arm64.tar.gz"
-      sha256 "a1e3b032c3761eaa7e74bf74061c951e77ba568393f1bdced748a0017b4d23f8"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.8/gobrewtest_0.1.8_linux_arm64.tar.gz"
+      sha256 "d4b39b6495cbfe7ac08eb1b27daebfa619bb4544fc6683e674616f66e0f6c085"
 
       def install
         bin.install "gobrewtest"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.7/gobrewtest_Linux_x86_64.tar.gz"
-      sha256 "25a0a92d7694b4591bb34b699704e7a9ca7975c48d5a862b058d073fd71663a1"
+      url "https://github.com/dhth/gobrewtest/releases/download/v0.1.8/gobrewtest_0.1.8_linux_amd64.tar.gz"
+      sha256 "289f0719bf2742ff5e6e0c26182170b5d7c60b94f1381fa5fb3fa00ffa2cb8e1"
 
       def install
         bin.install "gobrewtest"
