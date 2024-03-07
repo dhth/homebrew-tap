@@ -5,21 +5,21 @@
 class Outtasync < Formula
   desc "Quickly identify CloudFormation stacks that have gone out of sync with their counterpart stack files"
   homepage "https://github.com/dhth/outtasync"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/outtasync/releases/download/v0.1.1/outtasync_0.1.1_darwin_arm64.tar.gz"
-      sha256 "ae614945c7d304d4f1b06284150014e04992deac85e71fba1c0ba4588cdc9ec9"
+      url "https://github.com/dhth/outtasync/releases/download/v0.1.2/outtasync_0.1.2_darwin_arm64.tar.gz"
+      sha256 "9d292ef72222da398a8a68d7af51c41384fdcc4a2381a66aa14995a2086de284"
 
       def install
         bin.install "outtasync"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/outtasync/releases/download/v0.1.1/outtasync_0.1.1_darwin_amd64.tar.gz"
-      sha256 "85797c69a4223b3e4dfb975fd1a37eb0a5cc88997cec163a6dcbca0e956075be"
+      url "https://github.com/dhth/outtasync/releases/download/v0.1.2/outtasync_0.1.2_darwin_amd64.tar.gz"
+      sha256 "84da1dacc9752536e6bda1ac89393de6abba5a5cea65640d14542106f68fc768"
 
       def install
         bin.install "outtasync"
@@ -28,17 +28,17 @@ class Outtasync < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/outtasync/releases/download/v0.1.1/outtasync_0.1.1_linux_arm64.tar.gz"
-      sha256 "c2758e1031b692fd52fc55a0aca98edf0a981d1e36c1f93fa391b1e4084844a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/outtasync/releases/download/v0.1.2/outtasync_0.1.2_linux_amd64.tar.gz"
+      sha256 "a547c38bab70f9feaea3039cb70dd2afa5be12e10aa3600563bbb7c3935f2ba5"
 
       def install
         bin.install "outtasync"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/outtasync/releases/download/v0.1.1/outtasync_0.1.1_linux_amd64.tar.gz"
-      sha256 "ef8323428fb0a50eaba1a59885deafe6e6b9c464800bacb91fd85b29bba34bb5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/outtasync/releases/download/v0.1.2/outtasync_0.1.2_linux_arm64.tar.gz"
+      sha256 "e28a2eb5c60811c9fd39e4603a49acaf6d239300c0cff95eaa82b30a79639927"
 
       def install
         bin.install "outtasync"
