@@ -5,21 +5,21 @@
 class Ez < Formula
   desc "write stdin to stdout, but slowly"
   homepage "https://github.com/dhth/ez"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/ez/releases/download/v0.1.0/ez_0.1.0_darwin_arm64.tar.gz"
-      sha256 "8be5752819d89f7e38c1ce7b6f22cfa9b55368331f964c78c492bb4b59652850"
+      url "https://github.com/dhth/ez/releases/download/v0.1.1/ez_0.1.1_darwin_arm64.tar.gz"
+      sha256 "e768fd2d01ed0d3c7dbc92f2e775f3571c759b4a2a21d69d9585a48eb92b2406"
 
       def install
         bin.install "ez"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ez/releases/download/v0.1.0/ez_0.1.0_darwin_amd64.tar.gz"
-      sha256 "64a0f449a940e91aceb795dd11250229fa5defb22de80900baf159fc855c5057"
+      url "https://github.com/dhth/ez/releases/download/v0.1.1/ez_0.1.1_darwin_amd64.tar.gz"
+      sha256 "aa57c1c14812acf22203062f2316ba6f51ee1e8729e4138c1d6198456d348c2f"
 
       def install
         bin.install "ez"
@@ -29,16 +29,16 @@ class Ez < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ez/releases/download/v0.1.0/ez_0.1.0_linux_amd64.tar.gz"
-      sha256 "f1417ffc6ac3177673daa8a87173c51216ad5d46fa821c805a5c83e8db563909"
+      url "https://github.com/dhth/ez/releases/download/v0.1.1/ez_0.1.1_linux_amd64.tar.gz"
+      sha256 "1234cfa2210ba79a4cd6f791c1358d7568c8f2f4ffc7513e9cb59bb4a02053a6"
 
       def install
         bin.install "ez"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/ez/releases/download/v0.1.0/ez_0.1.0_linux_arm64.tar.gz"
-      sha256 "c146dc4ef548ea3ba2f81034825c5a5f0a3b53a518cf38f82f832666cebbab19"
+      url "https://github.com/dhth/ez/releases/download/v0.1.1/ez_0.1.1_linux_arm64.tar.gz"
+      sha256 "e2565b71ae95ce2ce26d482598f399ff641a97c58218ac010e6e3aeaadfef4d0"
 
       def install
         bin.install "ez"
