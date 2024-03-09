@@ -5,21 +5,21 @@
 class Inc < Formula
   desc "get the next semver for your repo from git tags"
   homepage "https://github.com/dhth/inc"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/inc/releases/download/v0.1.0/inc_0.1.0_darwin_arm64.tar.gz"
-      sha256 "d75f88f5a83ee3787be70d916bfc95b1b443d4e777911c161a9f82f964f47491"
+      url "https://github.com/dhth/inc/releases/download/v0.1.1/inc_0.1.1_darwin_arm64.tar.gz"
+      sha256 "1791f633b49d82368b9f5778d6e7b4cb9a9d9b6464e89e0638652e7a1f763b12"
 
       def install
         bin.install "inc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/inc/releases/download/v0.1.0/inc_0.1.0_darwin_amd64.tar.gz"
-      sha256 "5b832d465fd6ec7f4c66de26b5fd5c2a38720b6911599768a6730a7141dda062"
+      url "https://github.com/dhth/inc/releases/download/v0.1.1/inc_0.1.1_darwin_amd64.tar.gz"
+      sha256 "6934bceda3ca6d3de8d69f6a64abb349eda03d8e5170c4d5663e529d6e1e2600"
 
       def install
         bin.install "inc"
@@ -28,17 +28,17 @@ class Inc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/inc/releases/download/v0.1.0/inc_0.1.0_linux_arm64.tar.gz"
-      sha256 "3e2ebb58569347edc2ae48421dbc2a14cf9979ae37302b98bbd4b5911c9e5573"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/inc/releases/download/v0.1.1/inc_0.1.1_linux_amd64.tar.gz"
+      sha256 "a9101c94f34f14d83fe089667e3cb349f4e9a2d7a0e566518ca03b3d46f2c6f6"
 
       def install
         bin.install "inc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/inc/releases/download/v0.1.0/inc_0.1.0_linux_amd64.tar.gz"
-      sha256 "1f3b515c16f86989a44c492cb7bf77c68371a346adb15fcbdc5899d043ccc899"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/inc/releases/download/v0.1.1/inc_0.1.1_linux_arm64.tar.gz"
+      sha256 "0dd2af4701c1a5fd4a7c8b6500be488443d43ea8e87200e2e7e00a8d95a8a622"
 
       def install
         bin.install "inc"
