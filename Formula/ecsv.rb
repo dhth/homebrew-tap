@@ -5,21 +5,21 @@
 class Ecsv < Formula
   desc "Quickly check the versions of your systems running in ECS tasks across various environments"
   homepage "https://github.com/dhth/ecsv"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/ecsv/releases/download/v0.3.0/ecsv_0.3.0_darwin_arm64.tar.gz"
-      sha256 "7b960ea9500456840689df4051a4412041d22bf6df62a7968f2683f18dfa95bb"
+      url "https://github.com/dhth/ecsv/releases/download/v0.4.0/ecsv_0.4.0_darwin_arm64.tar.gz"
+      sha256 "853592b0263869a0e83605aad406f3d9fa743b14a71312503d6c8235428fef04"
 
       def install
         bin.install "ecsv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecsv/releases/download/v0.3.0/ecsv_0.3.0_darwin_amd64.tar.gz"
-      sha256 "f69511098357f7bd68fb6e231761555304d0269336f657714a33b958efc6431c"
+      url "https://github.com/dhth/ecsv/releases/download/v0.4.0/ecsv_0.4.0_darwin_amd64.tar.gz"
+      sha256 "23eb9ed188de66a6c40e163d5df2adfbc16853df29ed6249c288190695fd26af"
 
       def install
         bin.install "ecsv"
@@ -29,16 +29,16 @@ class Ecsv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/ecsv/releases/download/v0.3.0/ecsv_0.3.0_linux_arm64.tar.gz"
-      sha256 "b267605caf91aeec1b1262f5299010965a9c05f59fc7db82642ceee5e82a1cf2"
+      url "https://github.com/dhth/ecsv/releases/download/v0.4.0/ecsv_0.4.0_linux_arm64.tar.gz"
+      sha256 "44bcceb1352feb0ff6ee9e5018e9781ff5c3fb58ccf81cfc492184adb4608cd6"
 
       def install
         bin.install "ecsv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecsv/releases/download/v0.3.0/ecsv_0.3.0_linux_amd64.tar.gz"
-      sha256 "e7a6120af133130979b219086415f2a545545790ff827b48a21cba184443cbdb"
+      url "https://github.com/dhth/ecsv/releases/download/v0.4.0/ecsv_0.4.0_linux_amd64.tar.gz"
+      sha256 "6dee62ee76b4eb996c80aa856709da6318f008cecd75ddbc4046550573f4fae7"
 
       def install
         bin.install "ecsv"
