@@ -5,21 +5,21 @@
 class Schemas < Formula
   desc "Inspect postgres schemas in the terminal"
   homepage "https://github.com/dhth/schemas"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/schemas/releases/download/v0.1.1/schemas_0.1.1_darwin_arm64.tar.gz"
-      sha256 "a84a23ee027e0d0437984d40f9204a7da4f5b5f3f8a71fd4fc3f8ec65a96f754"
+      url "https://github.com/dhth/schemas/releases/download/v0.2.0/schemas_0.2.0_darwin_arm64.tar.gz"
+      sha256 "a196d8656d8c861cf474d9d28914f9566c6788071882f6f7799cf11ef5d72aa1"
 
       def install
         bin.install "schemas"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/schemas/releases/download/v0.1.1/schemas_0.1.1_darwin_amd64.tar.gz"
-      sha256 "74b8c63fb0f8637fef4e22eeed121d13d9f98cccb1b2e1c37a15c12ba88f1dba"
+      url "https://github.com/dhth/schemas/releases/download/v0.2.0/schemas_0.2.0_darwin_amd64.tar.gz"
+      sha256 "708e24e5804214b7845beed2b1f3e7def56edcdbf3f046783422ea01001be1e5"
 
       def install
         bin.install "schemas"
@@ -29,16 +29,16 @@ class Schemas < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/schemas/releases/download/v0.1.1/schemas_0.1.1_linux_arm64.tar.gz"
-      sha256 "3eb99daaff80b7db359a4b1e8035484bae4e05764f4321c0b3b1072ec4c140ce"
+      url "https://github.com/dhth/schemas/releases/download/v0.2.0/schemas_0.2.0_linux_arm64.tar.gz"
+      sha256 "daed569c46a1255d568cd815bc8c7dc638254515def177f7e843e211a0bd8ed8"
 
       def install
         bin.install "schemas"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/schemas/releases/download/v0.1.1/schemas_0.1.1_linux_amd64.tar.gz"
-      sha256 "c038c038ef5bef0d2ce1e0790dd42298179b8797734bea8f834e16c3c76f85c0"
+      url "https://github.com/dhth/schemas/releases/download/v0.2.0/schemas_0.2.0_linux_amd64.tar.gz"
+      sha256 "0909dbe950fb08910e2cf6f55cd26d1b6ad0c729d4a43357848ece19fff1ba04"
 
       def install
         bin.install "schemas"
