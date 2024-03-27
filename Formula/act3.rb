@@ -5,21 +5,21 @@
 class Act3 < Formula
   desc "Glance at the last 3 runs of your Github Actions"
   homepage "https://github.com/dhth/act3"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/act3/releases/download/v0.1.0/act3_0.1.0_darwin_arm64.tar.gz"
-      sha256 "864485725620bdde1b8e81200acde6884e1eaafff9048b5326bab4f0d3e89055"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/act3/releases/download/v0.2.0/act3_0.2.0_darwin_amd64.tar.gz"
+      sha256 "1ed7d33f13166c86adfa252a7ec826b482e35beca2cfaa5ead496971db7f8422"
 
       def install
         bin.install "act3"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.1.0/act3_0.1.0_darwin_amd64.tar.gz"
-      sha256 "baa36c028fc92c8d886c51e9a44e44431b5873ccf2d87e190829f88b5bb7e18a"
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/act3/releases/download/v0.2.0/act3_0.2.0_darwin_arm64.tar.gz"
+      sha256 "1d60e0500f80e08d0820350b6454b1469d6dcad1f087349315d3b6b560874c22"
 
       def install
         bin.install "act3"
@@ -28,17 +28,17 @@ class Act3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.1.0/act3_0.1.0_linux_amd64.tar.gz"
-      sha256 "7b8a1da29b37f40e2a06063a689b7c290232fe0adaeb1098b2535a35fa6d147f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/act3/releases/download/v0.2.0/act3_0.2.0_linux_arm64.tar.gz"
+      sha256 "947947e2624ee1c186bc931e05133f61e2f4a94786da57224206d8e8fad447d9"
 
       def install
         bin.install "act3"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/act3/releases/download/v0.1.0/act3_0.1.0_linux_arm64.tar.gz"
-      sha256 "bd09039c24807da2f28190897be4c19177f94bdb6386132e39af89b7d941a12e"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/act3/releases/download/v0.2.0/act3_0.2.0_linux_amd64.tar.gz"
+      sha256 "88680ac9ec1dbc7c9bcea0bc01b9255576ea4e355e4cb23723264019da0c9363"
 
       def install
         bin.install "act3"
