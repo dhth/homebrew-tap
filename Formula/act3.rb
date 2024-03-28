@@ -5,21 +5,21 @@
 class Act3 < Formula
   desc "Glance at the last 3 runs of your Github Actions"
   homepage "https://github.com/dhth/act3"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.2.1/act3_0.2.1_darwin_amd64.tar.gz"
-      sha256 "48ba28fb54bff8e8148b1a34510b6142ed15c7622d51253721b19157d9aa1a65"
+      url "https://github.com/dhth/act3/releases/download/v0.3.0/act3_0.3.0_darwin_amd64.tar.gz"
+      sha256 "7315421a68213b99eac794a92be34390f0cb175a91d490085719c0b2f15a0432"
 
       def install
         bin.install "act3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/act3/releases/download/v0.2.1/act3_0.2.1_darwin_arm64.tar.gz"
-      sha256 "d96beb6ecc5a6b307db297f221b4f4e4476feeb2ea03e88cf4fa99b89ed2052c"
+      url "https://github.com/dhth/act3/releases/download/v0.3.0/act3_0.3.0_darwin_arm64.tar.gz"
+      sha256 "f0318012d88bdd67b6ca5911a78b25e40ee66e80812f478d50bc067d810e134d"
 
       def install
         bin.install "act3"
@@ -29,16 +29,16 @@ class Act3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/act3/releases/download/v0.2.1/act3_0.2.1_linux_arm64.tar.gz"
-      sha256 "55113b857902f6a94fc04366d68ef98656ba62c7e39e422b8c9a86793c0c3b36"
+      url "https://github.com/dhth/act3/releases/download/v0.3.0/act3_0.3.0_linux_arm64.tar.gz"
+      sha256 "9a926abbecbc007b9cb677e288e6acf80eabe802602ba4bbdb6676df92aa8385"
 
       def install
         bin.install "act3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.2.1/act3_0.2.1_linux_amd64.tar.gz"
-      sha256 "27758bc70abab1f97d094d55423a541eaf667d81c4ff267ffa13fef3e36c0f60"
+      url "https://github.com/dhth/act3/releases/download/v0.3.0/act3_0.3.0_linux_amd64.tar.gz"
+      sha256 "6ee8b3314ea6539c423aa5955f601326f67ce278190ace8034b4c4df2435f196"
 
       def install
         bin.install "act3"
