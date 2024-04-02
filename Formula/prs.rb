@@ -5,21 +5,21 @@
 class Prs < Formula
   desc "Stay updated on PRs without leaving the terminal"
   homepage "https://github.com/dhth/prs"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/prs/releases/download/v0.1.1/prs_0.1.1_darwin_amd64.tar.gz"
-      sha256 "988807e480acbe62c6f0c1984f11ce4c71b26ee1bd86d002d386e449efe04d8a"
+      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_darwin_amd64.tar.gz"
+      sha256 "5feb68e8c13d25a8cf10c5ae71d12f543cfba30695466fceecc67cf163aafdff"
 
       def install
         bin.install "prs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/prs/releases/download/v0.1.1/prs_0.1.1_darwin_arm64.tar.gz"
-      sha256 "b10c211e63469e98debff93eabc025f8b97159a07cce8613aa8b91e5b4f2d797"
+      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_darwin_arm64.tar.gz"
+      sha256 "cba466104a86fe42eb502f2d0366564ffe4d4b28f496fa4e2f7a0ecb6161f561"
 
       def install
         bin.install "prs"
@@ -29,16 +29,16 @@ class Prs < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/prs/releases/download/v0.1.1/prs_0.1.1_linux_arm64.tar.gz"
-      sha256 "a84286f25d8ae5f4332986f2c2512577a32e0490f6055da4988646763c16d088"
+      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_linux_arm64.tar.gz"
+      sha256 "09343ada2115b165fdb8afdeeae1757e737ff7e35fb2d42d8d77ac8dffe4955e"
 
       def install
         bin.install "prs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/prs/releases/download/v0.1.1/prs_0.1.1_linux_amd64.tar.gz"
-      sha256 "8b37c45f6c515e326ddd6e889d555a8cc672d4672d233a8d7265a1b09cb765d5"
+      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_linux_amd64.tar.gz"
+      sha256 "482eb2696054649dcbd55737ca3d32a16b5de51c18e6abfd22bf51f93c198a04"
 
       def install
         bin.install "prs"
