@@ -5,21 +5,21 @@
 class Cueitup < Formula
   desc "Inspect messages in an AWS SQS queue in a simple and deliberate manner"
   homepage "https://github.com/dhth/cueitup"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.0/cueitup_0.2.0_darwin_amd64.tar.gz"
-      sha256 "ad7d075e60242f8d317c807d8a9adbb8991afdff5db7703d4a3f6e3837f05ad7"
+      url "https://github.com/dhth/cueitup/releases/download/v0.2.1/cueitup_0.2.1_darwin_amd64.tar.gz"
+      sha256 "a71e5973d59417115f355fe808577ded948952c5e65c0f06504642c9c79ec2f9"
 
       def install
         bin.install "cueitup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.0/cueitup_0.2.0_darwin_arm64.tar.gz"
-      sha256 "585dfe03207cdb30958e6bf5c06ff214e519074f17c40d227b79f6bde3573b65"
+      url "https://github.com/dhth/cueitup/releases/download/v0.2.1/cueitup_0.2.1_darwin_arm64.tar.gz"
+      sha256 "da592c2b1f5ac12d35eff415d0966cb74d1d0feed0a1ee5d910cc01c6e9cca54"
 
       def install
         bin.install "cueitup"
@@ -29,16 +29,16 @@ class Cueitup < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.0/cueitup_0.2.0_linux_amd64.tar.gz"
-      sha256 "5b26086a0d78f75a04c28bb6ebc637dd6205dc3b3559613be178b21dacf39f77"
+      url "https://github.com/dhth/cueitup/releases/download/v0.2.1/cueitup_0.2.1_linux_amd64.tar.gz"
+      sha256 "8889f2a8b17c378af3948b0d6be803a430dedd54f8d512b2c68cabfdb4201b39"
 
       def install
         bin.install "cueitup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.0/cueitup_0.2.0_linux_arm64.tar.gz"
-      sha256 "4dd291981f7c371dd2721a5142886debf3811ac1692e93dee9b5d1629d4ca3b6"
+      url "https://github.com/dhth/cueitup/releases/download/v0.2.1/cueitup_0.2.1_linux_arm64.tar.gz"
+      sha256 "ee47b64106f406fe1dcc6cfa6f5c34320a97bbeefe5b71b432ad15cc3496bb65"
 
       def install
         bin.install "cueitup"
