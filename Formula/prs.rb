@@ -11,7 +11,7 @@ class Prs < Formula
   on_macos do
     on_intel do
       url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_darwin_amd64.tar.gz"
-      sha256 "10d06d71afd037b69528c0dc8e295ae1cb8afa02e1c1b8ce8fccaec674020693"
+      sha256 "e079578d696ea1f2f68a50a45373f3edd755bbb46b8feafaa07809d41bbaccde"
 
       def install
         bin.install "prs"
@@ -19,7 +19,7 @@ class Prs < Formula
     end
     on_arm do
       url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_darwin_arm64.tar.gz"
-      sha256 "8858c7cd28410996c87dab5c3978a7c8e8b7c1b8db2006a8a8c7bc1f253b8ee9"
+      sha256 "0c1a608b9ee45395fa7e0db455bef155fe023eb7049dd267d7bdb05c4d6a66c6"
 
       def install
         bin.install "prs"
@@ -31,7 +31,7 @@ class Prs < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_linux_amd64.tar.gz"
-        sha256 "067a91f0ed01a3e999447bc6779604d4355efc0dfd3d0543780aefb98bc147a8"
+        sha256 "e5c3171407175f596ce77a4069abe35887b0d333f14bc7f09abb0d40b0929bfa"
 
         def install
           bin.install "prs"
@@ -41,7 +41,7 @@ class Prs < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_linux_arm64.tar.gz"
-        sha256 "74f29053829bc22580e3e04040d82f4127eab990c8dc49e1d4c8e3068d690668"
+        sha256 "18a13c1d742cea62b4fa9bbbe74599d5932a10e35e87013546bb349acd3e7886"
 
         def install
           bin.install "prs"
