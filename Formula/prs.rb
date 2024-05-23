@@ -5,21 +5,21 @@
 class Prs < Formula
   desc "Stay updated on PRs without leaving the terminal"
   homepage "https://github.com/dhth/prs"
-  version "0.1.2"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_darwin_amd64.tar.gz"
-      sha256 "5feb68e8c13d25a8cf10c5ae71d12f543cfba30695466fceecc67cf163aafdff"
+    on_intel do
+      url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_darwin_amd64.tar.gz"
+      sha256 "10d06d71afd037b69528c0dc8e295ae1cb8afa02e1c1b8ce8fccaec674020693"
 
       def install
         bin.install "prs"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_darwin_arm64.tar.gz"
-      sha256 "cba466104a86fe42eb502f2d0366564ffe4d4b28f496fa4e2f7a0ecb6161f561"
+    on_arm do
+      url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_darwin_arm64.tar.gz"
+      sha256 "8858c7cd28410996c87dab5c3978a7c8e8b7c1b8db2006a8a8c7bc1f253b8ee9"
 
       def install
         bin.install "prs"
@@ -28,20 +28,24 @@ class Prs < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_linux_arm64.tar.gz"
-      sha256 "09343ada2115b165fdb8afdeeae1757e737ff7e35fb2d42d8d77ac8dffe4955e"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_linux_amd64.tar.gz"
+        sha256 "067a91f0ed01a3e999447bc6779604d4355efc0dfd3d0543780aefb98bc147a8"
 
-      def install
-        bin.install "prs"
+        def install
+          bin.install "prs"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/prs/releases/download/v0.1.2/prs_0.1.2_linux_amd64.tar.gz"
-      sha256 "482eb2696054649dcbd55737ca3d32a16b5de51c18e6abfd22bf51f93c198a04"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/prs/releases/download/v0.2.0/prs_0.2.0_linux_arm64.tar.gz"
+        sha256 "74f29053829bc22580e3e04040d82f4127eab990c8dc49e1d4c8e3068d690668"
 
-      def install
-        bin.install "prs"
+        def install
+          bin.install "prs"
+        end
       end
     end
   end
