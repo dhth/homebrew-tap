@@ -5,21 +5,21 @@
 class Mult < Formula
   desc "Run a command multiple times and glance at the outputs"
   homepage "https://github.com/dhth/mult"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/mult/releases/download/v0.1.0/mult_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7431c9f298f22b659f0ec51132c5261aab8ddb61374a166f35d49134661f22d7"
+      url "https://github.com/dhth/mult/releases/download/v0.1.1/mult_0.1.1_darwin_amd64.tar.gz"
+      sha256 "46223c514bb5d4005f525747f8f96f97bde9672266e4df30e9b9d24ea188fc62"
 
       def install
         bin.install "mult"
       end
     end
     on_arm do
-      url "https://github.com/dhth/mult/releases/download/v0.1.0/mult_0.1.0_darwin_arm64.tar.gz"
-      sha256 "712fc8941535c2cd94b7cafa9f221eb82ceee0f2e5a0548eac7077e5fcf1d2a0"
+      url "https://github.com/dhth/mult/releases/download/v0.1.1/mult_0.1.1_darwin_arm64.tar.gz"
+      sha256 "f40d47f49642e77c275fad81e888958c9c37308592792784dc624f3333e5d8af"
 
       def install
         bin.install "mult"
@@ -30,8 +30,8 @@ class Mult < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/mult/releases/download/v0.1.0/mult_0.1.0_linux_amd64.tar.gz"
-        sha256 "5debb87254a927147d11d2720a54dc5e33fe372a6cf42907a07aa86a29c4ec7b"
+        url "https://github.com/dhth/mult/releases/download/v0.1.1/mult_0.1.1_linux_amd64.tar.gz"
+        sha256 "0aa4f1c3500063f576df5fb15140f4e6645d6a06b038d3f56eeb656f72e5713c"
 
         def install
           bin.install "mult"
@@ -40,8 +40,8 @@ class Mult < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/mult/releases/download/v0.1.0/mult_0.1.0_linux_arm64.tar.gz"
-        sha256 "96987c9927c8a9cd4ccb50f775d93c626d4d7e47b9b15a6f909a8c0ac2d0d1be"
+        url "https://github.com/dhth/mult/releases/download/v0.1.1/mult_0.1.1_linux_arm64.tar.gz"
+        sha256 "b0d9c74cf82400c4245d40830ceb8d0117fd064670c4460a899193f2336b944f"
 
         def install
           bin.install "mult"
