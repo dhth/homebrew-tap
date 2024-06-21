@@ -5,21 +5,21 @@
 class Hours < Formula
   desc "A no-frills time tracking toolkit for the command line"
   homepage "https://github.com/dhth/hours"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/hours/releases/download/v0.1.0/hours_0.1.0_darwin_amd64.tar.gz"
-      sha256 "5a66516175673e1a8525f1b57b86826aa227aafdd39b0702ea52b8a5e63960e2"
+      url "https://github.com/dhth/hours/releases/download/v0.2.0/hours_0.2.0_darwin_amd64.tar.gz"
+      sha256 "b9eebc947ed630e3893b7975b08efd26db1d647a2bc53f0d8753ff3a2687658c"
 
       def install
         bin.install "hours"
       end
     end
     on_arm do
-      url "https://github.com/dhth/hours/releases/download/v0.1.0/hours_0.1.0_darwin_arm64.tar.gz"
-      sha256 "f918a8124a34b704a315bc9017e739e9ec8cc71665210d5bc80f62b3204339f3"
+      url "https://github.com/dhth/hours/releases/download/v0.2.0/hours_0.2.0_darwin_arm64.tar.gz"
+      sha256 "ccc14e02b926aa7dfcf4b909a0f50ea03ee3205d10d1a5a008ee37385cdbf6b4"
 
       def install
         bin.install "hours"
@@ -30,8 +30,8 @@ class Hours < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.1.0/hours_0.1.0_linux_amd64.tar.gz"
-        sha256 "0f140154193f474dacdb6b16c2b412cdcc51daa1f84d788c16c4cdb7206d9773"
+        url "https://github.com/dhth/hours/releases/download/v0.2.0/hours_0.2.0_linux_amd64.tar.gz"
+        sha256 "90ecef273fb63493eb95e2ecf8072afb976097b8d4f95be73e8907b869821f11"
 
         def install
           bin.install "hours"
@@ -40,8 +40,8 @@ class Hours < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.1.0/hours_0.1.0_linux_arm64.tar.gz"
-        sha256 "d54cda8d1f74016d0795bb178c80d11963c9fde5c064c6df315b8f66308a1300"
+        url "https://github.com/dhth/hours/releases/download/v0.2.0/hours_0.2.0_linux_arm64.tar.gz"
+        sha256 "c29c6f479297d0e46bed4b2128d9c287883d4b62671cbb34a62c2c719b06fed9"
 
         def install
           bin.install "hours"
