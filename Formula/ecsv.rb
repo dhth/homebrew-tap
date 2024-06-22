@@ -5,21 +5,21 @@
 class Ecsv < Formula
   desc "Quickly check the versions of your systems running in ECS tasks across various environments"
   homepage "https://github.com/dhth/ecsv"
-  version "1.2.1"
+  version "1.2.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecsv/releases/download/v1.2.1/ecsv_1.2.1_darwin_amd64.tar.gz"
-      sha256 "512f2a7787279747c1f1d47502300351540f90d88ddf10a7c6ef8e692c4411f2"
+    on_intel do
+      url "https://github.com/dhth/ecsv/releases/download/v1.2.2/ecsv_1.2.2_darwin_amd64.tar.gz"
+      sha256 "6592d542a4994a217a5bc6db6e8e09a620a8a64c6eeff85d1eb8a4545b9d933d"
 
       def install
         bin.install "ecsv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/ecsv/releases/download/v1.2.1/ecsv_1.2.1_darwin_arm64.tar.gz"
-      sha256 "9011f08837966803299fd13cbd08440733c071d1eed30ee0524e7de4ced40fd9"
+    on_arm do
+      url "https://github.com/dhth/ecsv/releases/download/v1.2.2/ecsv_1.2.2_darwin_arm64.tar.gz"
+      sha256 "1297bfd6244e49068af83daf36f9dcf54760eec3063e1cdf83b3834b9d061029"
 
       def install
         bin.install "ecsv"
@@ -28,20 +28,24 @@ class Ecsv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/ecsv/releases/download/v1.2.1/ecsv_1.2.1_linux_arm64.tar.gz"
-      sha256 "6c1f33de40e62db644bcd5b2a296e3b5e48da98be9c79cce63e10e729a8c55f5"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/ecsv/releases/download/v1.2.2/ecsv_1.2.2_linux_amd64.tar.gz"
+        sha256 "dcbb621fa458febf0c3848f0b4f25545b0335cd643995ffd19d56045b46d8e59"
 
-      def install
-        bin.install "ecsv"
+        def install
+          bin.install "ecsv"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecsv/releases/download/v1.2.1/ecsv_1.2.1_linux_amd64.tar.gz"
-      sha256 "4812203dd0dbb978c304c2c8e1e3c3375ead394025dbf4ecd387988f72a5322e"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/ecsv/releases/download/v1.2.2/ecsv_1.2.2_linux_arm64.tar.gz"
+        sha256 "671b65b60039ddd9cbd39703208d9db73f54137c379dd8377bf6d43c4b4ff865"
 
-      def install
-        bin.install "ecsv"
+        def install
+          bin.install "ecsv"
+        end
       end
     end
   end
