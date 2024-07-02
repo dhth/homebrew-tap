@@ -5,21 +5,21 @@
 class Punchout < Formula
   desc "punchout takes the suck out of logging time on JIRA"
   homepage "https://github.com/dhth/punchout"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/punchout/releases/download/v1.0.0/punchout_1.0.0_darwin_amd64.tar.gz"
-      sha256 "4d44ff5b8764a4e5eb1736d668c26c6b5d05ae4faaaba481472d27fceb75d8c2"
+      url "https://github.com/dhth/punchout/releases/download/v1.1.0/punchout_1.1.0_darwin_amd64.tar.gz"
+      sha256 "2b86009e50f6f69e7d42d41f5fef6e0b441da795efa189ab8f171b5f3a8dd632"
 
       def install
         bin.install "punchout"
       end
     end
     on_arm do
-      url "https://github.com/dhth/punchout/releases/download/v1.0.0/punchout_1.0.0_darwin_arm64.tar.gz"
-      sha256 "8e21fb83c8cfec838123c1c4cbf91b77dd79604812010f8145d5bc9afee8ade6"
+      url "https://github.com/dhth/punchout/releases/download/v1.1.0/punchout_1.1.0_darwin_arm64.tar.gz"
+      sha256 "c4bee74127bc25079d08e8fd8890c8e4a542c8841555404eb7063a17fed3f900"
 
       def install
         bin.install "punchout"
@@ -30,8 +30,8 @@ class Punchout < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/punchout/releases/download/v1.0.0/punchout_1.0.0_linux_amd64.tar.gz"
-        sha256 "0654883a93f0516f8c6423332e0cbc650afd400d4f94003df5ab14e82f2c3d76"
+        url "https://github.com/dhth/punchout/releases/download/v1.1.0/punchout_1.1.0_linux_amd64.tar.gz"
+        sha256 "65f7ab52a559bf99e6d5d73d939e797c7d53d54ac753ba43690d649c280ddc37"
 
         def install
           bin.install "punchout"
@@ -40,8 +40,8 @@ class Punchout < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/punchout/releases/download/v1.0.0/punchout_1.0.0_linux_arm64.tar.gz"
-        sha256 "0dfd6ece48ae0817278777877cbd4ccc5ffa87389cf0592be14692e92887e542"
+        url "https://github.com/dhth/punchout/releases/download/v1.1.0/punchout_1.1.0_linux_arm64.tar.gz"
+        sha256 "2ee8269554569500ca3417f401ca0a1eae60de3a6058932046c45da50e93ffa9"
 
         def install
           bin.install "punchout"
