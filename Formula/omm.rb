@@ -5,21 +5,21 @@
 class Omm < Formula
   desc "omm is a keyboard-driven task manager for the command line"
   homepage "https://github.com/dhth/omm"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/omm/releases/download/v0.1.0/omm_0.1.0_darwin_amd64.tar.gz"
-      sha256 "9a78f689413c653832f98fa037325c98e63f3e7906f968e97cbb77d0db52d1cd"
+      url "https://github.com/dhth/omm/releases/download/v0.2.0/omm_0.2.0_darwin_amd64.tar.gz"
+      sha256 "f01d3a43eec9857b887b3b01d81354065fe328f611c1be76c27d5ba88de1f53d"
 
       def install
         bin.install "omm"
       end
     end
     on_arm do
-      url "https://github.com/dhth/omm/releases/download/v0.1.0/omm_0.1.0_darwin_arm64.tar.gz"
-      sha256 "06437f74b813922083d4f007d8734c186785dfe03275f6297753a9cd8aa0b980"
+      url "https://github.com/dhth/omm/releases/download/v0.2.0/omm_0.2.0_darwin_arm64.tar.gz"
+      sha256 "46030179e0fb1e27b9a529d2b5a4156c423c0be237e6e3fbb0b02e539f59efb5"
 
       def install
         bin.install "omm"
@@ -30,8 +30,8 @@ class Omm < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/omm/releases/download/v0.1.0/omm_0.1.0_linux_amd64.tar.gz"
-        sha256 "59d608af86f2bd600e8ac32a7b5af13339c1d37951f48579aec67706c699b567"
+        url "https://github.com/dhth/omm/releases/download/v0.2.0/omm_0.2.0_linux_amd64.tar.gz"
+        sha256 "be6703e86d7697ef23a427a07ae10e60893bad0381b22c76e3527edbc77ba192"
 
         def install
           bin.install "omm"
@@ -40,8 +40,8 @@ class Omm < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/omm/releases/download/v0.1.0/omm_0.1.0_linux_arm64.tar.gz"
-        sha256 "1e21f68c98f0589440a3f2f75d6e46d58a2c9a319ebb1a7d8eaa358facf17781"
+        url "https://github.com/dhth/omm/releases/download/v0.2.0/omm_0.2.0_linux_arm64.tar.gz"
+        sha256 "4a9350bf134193978b0a671599b87ae16d299b6cd555bb56e87c48fed41e9db8"
 
         def install
           bin.install "omm"
