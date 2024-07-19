@@ -5,21 +5,21 @@
 class Omm < Formula
   desc "omm is a keyboard-driven task manager for the command line"
   homepage "https://github.com/dhth/omm"
-  version "0.2.2"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/omm/releases/download/v0.2.2/omm_0.2.2_darwin_amd64.tar.gz"
-      sha256 "02ba8d1ff9976ceff5786b4544c27495eeae2eb2861fe84e06ce8020346125af"
+      url "https://github.com/dhth/omm/releases/download/v0.3.0/omm_0.3.0_darwin_amd64.tar.gz"
+      sha256 "29e7ddfa6a1eff86606775fa0dfb88e93b56e65b6ef8cf9db799ad765670ec0d"
 
       def install
         bin.install "omm"
       end
     end
     on_arm do
-      url "https://github.com/dhth/omm/releases/download/v0.2.2/omm_0.2.2_darwin_arm64.tar.gz"
-      sha256 "ea6d3b4eaabecb0ecbeff38c0c8a94a154dbfcefd33efa0bdf25405fad25fed9"
+      url "https://github.com/dhth/omm/releases/download/v0.3.0/omm_0.3.0_darwin_arm64.tar.gz"
+      sha256 "b7ec1ca320b0f8ddd70c16a03f53fba8f0ed88de28e2922b8814cb941b07aa72"
 
       def install
         bin.install "omm"
@@ -30,8 +30,8 @@ class Omm < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/omm/releases/download/v0.2.2/omm_0.2.2_linux_amd64.tar.gz"
-        sha256 "40cc4eeaa646f1bc09ec55c31dc8d429428642251815010f3ae17819324f8809"
+        url "https://github.com/dhth/omm/releases/download/v0.3.0/omm_0.3.0_linux_amd64.tar.gz"
+        sha256 "82b998acd5dd8438c50a2a59367fd5774be23a559ca75e2bc2451098198361e2"
 
         def install
           bin.install "omm"
@@ -40,8 +40,8 @@ class Omm < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/omm/releases/download/v0.2.2/omm_0.2.2_linux_arm64.tar.gz"
-        sha256 "4743e497329c6450621ae2071449eee816491ad147d268a590afd00a9526a859"
+        url "https://github.com/dhth/omm/releases/download/v0.3.0/omm_0.3.0_linux_arm64.tar.gz"
+        sha256 "cd186c940377e040441af790c4f9ccad7f2ed49a8d979273542e09aad43a4067"
 
         def install
           bin.install "omm"
