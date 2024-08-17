@@ -5,21 +5,21 @@
 class Act3 < Formula
   desc "Glance at the last 3 runs of your Github Actions"
   homepage "https://github.com/dhth/act3"
-  version "0.4.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.4.0/act3_0.4.0_darwin_amd64.tar.gz"
-      sha256 "4974b0e15397fc6e713f87124d4475c45454f25620c9c088caa8e5c51e049844"
+    on_intel do
+      url "https://github.com/dhth/act3/releases/download/v1.0.0/act3_1.0.0_darwin_amd64.tar.gz"
+      sha256 "62e828e9378fda0d05ed2dd546b92f3f1ab5b7dcd7689fd180ab1fdc390a2dc7"
 
       def install
         bin.install "act3"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/act3/releases/download/v0.4.0/act3_0.4.0_darwin_arm64.tar.gz"
-      sha256 "6df266237b978360ecf824a2c8e507046ec37205914cb1d7d9c64617d8f22183"
+    on_arm do
+      url "https://github.com/dhth/act3/releases/download/v1.0.0/act3_1.0.0_darwin_arm64.tar.gz"
+      sha256 "fb925e42dc5bc078929e1e61a27b04c5c5f7264e2b75b2e18c51315a04d0d650"
 
       def install
         bin.install "act3"
@@ -28,20 +28,24 @@ class Act3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/act3/releases/download/v0.4.0/act3_0.4.0_linux_arm64.tar.gz"
-      sha256 "2244588a5b2cb631e78be79940015205fc53b4198812b3cf2c84add6bacc2530"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/act3/releases/download/v1.0.0/act3_1.0.0_linux_amd64.tar.gz"
+        sha256 "0a92aa1e17cda5ccf2e28543ba7a878adc376fced6ab8e2658f86b9f7c499e3c"
 
-      def install
-        bin.install "act3"
+        def install
+          bin.install "act3"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/act3/releases/download/v0.4.0/act3_0.4.0_linux_amd64.tar.gz"
-      sha256 "40eb21a321d61641a825fadb400da05b51bd67268544f9a224366ef8adcebd6a"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/act3/releases/download/v1.0.0/act3_1.0.0_linux_arm64.tar.gz"
+        sha256 "5d27b289d4871fc39719f86da8765c9e76c1b463dee304fd71834918216524d4"
 
-      def install
-        bin.install "act3"
+        def install
+          bin.install "act3"
+        end
       end
     end
   end
