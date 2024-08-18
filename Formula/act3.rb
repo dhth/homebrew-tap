@@ -5,21 +5,21 @@
 class Act3 < Formula
   desc "Glance at the last 3 runs of your Github Actions"
   homepage "https://github.com/dhth/act3"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_darwin_amd64.tar.gz"
-      sha256 "dd2d15e3f5919fac797159245693efe33479de3566c62951a71ebc51de23b5eb"
+      url "https://github.com/dhth/act3/releases/download/v1.1.1/act3_1.1.1_darwin_amd64.tar.gz"
+      sha256 "c22f385750bacc31208a52f4622eef0d54842161b13b8e071323289a72c9acec"
 
       def install
         bin.install "act3"
       end
     end
     on_arm do
-      url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_darwin_arm64.tar.gz"
-      sha256 "59afe82b0436f450b5f8028422e2b6637645cbc7ee4b8f0d82b90a5c4acff23f"
+      url "https://github.com/dhth/act3/releases/download/v1.1.1/act3_1.1.1_darwin_arm64.tar.gz"
+      sha256 "cd174f18fa97e3e7aeba433898a42dfd2a0ba64ad88ce3a5280085129c2356d6"
 
       def install
         bin.install "act3"
@@ -30,8 +30,8 @@ class Act3 < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_linux_amd64.tar.gz"
-        sha256 "03838ca112b1cb9f0945559f17c128d127b95e105488a8c81e3eaf54a88a5238"
+        url "https://github.com/dhth/act3/releases/download/v1.1.1/act3_1.1.1_linux_amd64.tar.gz"
+        sha256 "aa502a0a622d655d06acf1a75d3da7292eaf44c34d731e8a9a76aff794ef9595"
 
         def install
           bin.install "act3"
@@ -40,8 +40,8 @@ class Act3 < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_linux_arm64.tar.gz"
-        sha256 "c4f0301e0fd06b9a6f91b8731c2d5bdf15a15c79674910d52a0992c2023b1f3e"
+        url "https://github.com/dhth/act3/releases/download/v1.1.1/act3_1.1.1_linux_arm64.tar.gz"
+        sha256 "d56ade93927cb9e1966697f404883fb0cae6211823e0cf314212c329bbf43532"
 
         def install
           bin.install "act3"
