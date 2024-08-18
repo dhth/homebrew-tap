@@ -11,7 +11,7 @@ class Act3 < Formula
   on_macos do
     on_intel do
       url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_darwin_amd64.tar.gz"
-      sha256 "6cecc17b0024272362d075779cf45b06e66699060ad6a36468c3c4333bfbd2e1"
+      sha256 "dd2d15e3f5919fac797159245693efe33479de3566c62951a71ebc51de23b5eb"
 
       def install
         bin.install "act3"
@@ -19,7 +19,7 @@ class Act3 < Formula
     end
     on_arm do
       url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_darwin_arm64.tar.gz"
-      sha256 "bee21d8524acf2d1e88d13a7945632da5c888d2963df1fedb573dc5f9c902146"
+      sha256 "59afe82b0436f450b5f8028422e2b6637645cbc7ee4b8f0d82b90a5c4acff23f"
 
       def install
         bin.install "act3"
@@ -31,7 +31,7 @@ class Act3 < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_linux_amd64.tar.gz"
-        sha256 "7f2166064d21f54900fe8a32998945ad4d6138c1a20b8e77bd0b6a74f1883043"
+        sha256 "03838ca112b1cb9f0945559f17c128d127b95e105488a8c81e3eaf54a88a5238"
 
         def install
           bin.install "act3"
@@ -41,7 +41,7 @@ class Act3 < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/dhth/act3/releases/download/v1.1.0/act3_1.1.0_linux_arm64.tar.gz"
-        sha256 "1d1263a74a35c5baeaf731f687119721b67d86e997ced1eaf2ef26b192d3e63b"
+        sha256 "c4f0301e0fd06b9a6f91b8731c2d5bdf15a15c79674910d52a0992c2023b1f3e"
 
         def install
           bin.install "act3"
