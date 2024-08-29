@@ -1,21 +1,21 @@
 class Tbll < Formula
   desc "tbll outputs data in tabular format"
   homepage "https://github.com/dhth/tbll"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/tbll/releases/download/v0.1.0/tbll-aarch64-apple-darwin.tar.xz"
-      sha256 "25405799b81e9962c812c50f1ab0c87b2912a49103e7bf7f6b2cc6f0e1fbc3a9"
+      url "https://github.com/dhth/tbll/releases/download/v0.2.0/tbll-aarch64-apple-darwin.tar.xz"
+      sha256 "74d2355d556a23eccc57e80729be7bd9771829fadddcf8eed674fed04c3bfa0d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tbll/releases/download/v0.1.0/tbll-x86_64-apple-darwin.tar.xz"
-      sha256 "e0423a10c1bbb21bbde22df5ef800b8b8d4c7c1de96673ae1c795f61d050b6d5"
+      url "https://github.com/dhth/tbll/releases/download/v0.2.0/tbll-x86_64-apple-darwin.tar.xz"
+      sha256 "3422f778f3eeeb0e0b7a3bbacdff9cfa709a0c39ddf4f5e0316739d184ece7e9"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tbll/releases/download/v0.1.0/tbll-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9679de06026dc359feb45393b364841b0c3a7007d90dff3638b2da44b3876b09"
+      url "https://github.com/dhth/tbll/releases/download/v0.2.0/tbll-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "24a5ae0620d0956b242b6c7c6b6b1880baf4d1339668a17455b17ade79fa4e4f"
     end
   end
 
