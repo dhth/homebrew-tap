@@ -1,21 +1,21 @@
 class Tomo < Formula
   desc "tomo is a no-frills pomodoro progress indicator for tmux"
   homepage "https://github.com/dhth/tomo"
-  version "0.1.1"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/tomo/releases/download/v0.1.1/tomo-aarch64-apple-darwin.tar.xz"
-      sha256 "ec129ddaae0d8d059f59a8f67da22bbf011742206af6938a512180c64ce27d59"
+      url "https://github.com/dhth/tomo/releases/download/v0.2.0/tomo-aarch64-apple-darwin.tar.xz"
+      sha256 "c4316bb87326c5f865e0f7561d121ffe63b61e1a53b976cbfe0a82ecdbdba246"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tomo/releases/download/v0.1.1/tomo-x86_64-apple-darwin.tar.xz"
-      sha256 "eb3c8cf196efaf98c2130be8d66cd6db093f8bc3b342cabde12c5e954bf2a37d"
+      url "https://github.com/dhth/tomo/releases/download/v0.2.0/tomo-x86_64-apple-darwin.tar.xz"
+      sha256 "0473c7b005c6349decc9781f3f246f6ee314f9caeeb75b0eee9a5ef922eb0617"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tomo/releases/download/v0.1.1/tomo-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cccabd659658916cf79c724d7d31586b789e4f62ae23b9042cd1b5e7b9f575af"
+      url "https://github.com/dhth/tomo/releases/download/v0.2.0/tomo-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7e8323148eca0591fc06580ff6d4b10550998bb17154fd62ee54e3032f7fb927"
     end
   end
 
