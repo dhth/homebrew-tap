@@ -5,21 +5,21 @@
 class Dstll < Formula
   desc "dstll gives you a high level overview of code constructs"
   homepage "https://github.com/dhth/dstll"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/dhth/dstll/releases/download/v0.1.0/dstll_0.1.0_darwin_amd64.tar.gz"
-      sha256 "c5262eb6c44f50ac9f1342be108479555d94277693beb8f8599ef83168940e4f"
+      url "https://github.com/dhth/dstll/releases/download/v0.2.0/dstll_0.2.0_darwin_amd64.tar.gz"
+      sha256 "94d7866075902733cd30cf7fd1e010577d20df261ee9fc11b13f2b3d22c0a759"
 
       def install
         bin.install "dstll"
       end
     end
     on_arm do
-      url "https://github.com/dhth/dstll/releases/download/v0.1.0/dstll_0.1.0_darwin_arm64.tar.gz"
-      sha256 "6224e2e90da58d546dbaf32722b9dd28e6808c4a6767b828616a3c8a73df0830"
+      url "https://github.com/dhth/dstll/releases/download/v0.2.0/dstll_0.2.0_darwin_arm64.tar.gz"
+      sha256 "1b91f607db4a7eb4d152b73a74f223d4330e29702900f3a5729aa7fa8a93ff1d"
 
       def install
         bin.install "dstll"
@@ -30,8 +30,8 @@ class Dstll < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/dstll/releases/download/v0.1.0/dstll_0.1.0_linux_amd64.tar.gz"
-        sha256 "27056f43e2a88cc596d868079c9cbf7ae0de3e2dc6bbcfaaf5f8e14a7fbb0a10"
+        url "https://github.com/dhth/dstll/releases/download/v0.2.0/dstll_0.2.0_linux_amd64.tar.gz"
+        sha256 "23cfcc41158500a7d1e4bc5caf003501f7a675fb6cf29cf602d166875ffc8334"
 
         def install
           bin.install "dstll"
@@ -40,8 +40,8 @@ class Dstll < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/dstll/releases/download/v0.1.0/dstll_0.1.0_linux_arm64.tar.gz"
-        sha256 "14c1db416aac5158166e7621b69bb55038a1670fdfc906d17a90e44a7a92ee77"
+        url "https://github.com/dhth/dstll/releases/download/v0.2.0/dstll_0.2.0_linux_arm64.tar.gz"
+        sha256 "d94d6840ae291296854e1ac1f2d70bf6083ca48319cfdbd52b1ae594642f748b"
 
         def install
           bin.install "dstll"
