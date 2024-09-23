@@ -1,20 +1,20 @@
 class Sqdj < Formula
   desc "sqdj shortens delimited data"
   homepage "https://github.com/dhth/squidge"
-  version "0.2.1"
+  version "0.2.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/squidge/releases/download/v0.2.1/sqdj-aarch64-apple-darwin.tar.xz"
-      sha256 "c93e340a3f9d7afc96dd1193e2127fa3ff41711891b6b6fb05e7d738479122b4"
+      url "https://github.com/dhth/squidge/releases/download/v0.2.3/sqdj-aarch64-apple-darwin.tar.xz"
+      sha256 "ebaaf54dbbb7edd05faf09665119300b66d5d8e1b4ebe19ca6a3a52ee59e8808"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/squidge/releases/download/v0.2.1/sqdj-x86_64-apple-darwin.tar.xz"
-      sha256 "740672ff563d0acb6e8bb1a304831740ba4b39cb564753ce5b2053ea07b3e219"
+      url "https://github.com/dhth/squidge/releases/download/v0.2.3/sqdj-x86_64-apple-darwin.tar.xz"
+      sha256 "5911a6fcd828b299569faf72bc072d0de16ef1ba52955c68bd7eaeca466f8159"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/squidge/releases/download/v0.2.1/sqdj-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "205c142fb7f7181782450fa048b628d76a0a91f8baf5483dcdab04fb377e7211"
+    url "https://github.com/dhth/squidge/releases/download/v0.2.3/sqdj-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "c0791b8c8140490207f9c3199ab0ca313a2ce5ae2aaeb6404dc549a8861ab26f"
   end
   license "MIT"
 
