@@ -5,21 +5,21 @@
 class Act3 < Formula
   desc "Glance at the last 3 runs of your Github Actions"
   homepage "https://github.com/dhth/act3"
-  version "1.1.3"
+  version "1.1.4"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/dhth/act3/releases/download/v1.1.3/act3_1.1.3_darwin_amd64.tar.gz"
-      sha256 "bd63ed19559ff539e71926948fe9a64c96ee4658624b135615ed11f0839ea4a8"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/act3/releases/download/v1.1.4/act3_1.1.4_darwin_amd64.tar.gz"
+      sha256 "a499790c8eb59604af2b51bbed589a13e548a8d27c86374d2625db27d519ad48"
 
       def install
         bin.install "act3"
       end
     end
-    on_arm do
-      url "https://github.com/dhth/act3/releases/download/v1.1.3/act3_1.1.3_darwin_arm64.tar.gz"
-      sha256 "827127bb11814227ac3ddcbd68c41ea2bcc47d5955f42d5bbe125f9a47dcf962"
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/act3/releases/download/v1.1.4/act3_1.1.4_darwin_arm64.tar.gz"
+      sha256 "3012fd24a4b0db6b1560b78b7b8b33def40eb54075cee7a9405647c77036e404"
 
       def install
         bin.install "act3"
@@ -28,20 +28,20 @@ class Act3 < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/act3/releases/download/v1.1.3/act3_1.1.3_linux_amd64.tar.gz"
-        sha256 "90472ec940bd3013ae7c4e6990aed8ee27ede949bbd93a9e1d8f8ddc0a2a0561"
+        url "https://github.com/dhth/act3/releases/download/v1.1.4/act3_1.1.4_linux_amd64.tar.gz"
+        sha256 "774bac0daaa697b0651a8dde075429057431d2f6a04a81c715abe74df714e640"
 
         def install
           bin.install "act3"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/act3/releases/download/v1.1.3/act3_1.1.3_linux_arm64.tar.gz"
-        sha256 "cb05596e8a69ce1d2aec57d87c4eceafb1b12c45f06df6ead9f6cb533a0c5897"
+        url "https://github.com/dhth/act3/releases/download/v1.1.4/act3_1.1.4_linux_arm64.tar.gz"
+        sha256 "487227293e8d7ff6d1ff43bb7c929f7e289d67154c9b031cf93853bf324d8776"
 
         def install
           bin.install "act3"
