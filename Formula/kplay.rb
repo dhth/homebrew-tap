@@ -5,21 +5,21 @@
 class Kplay < Formula
   desc "Inspect messages in a Kafka topic in a simple and deliberate manner"
   homepage "https://github.com/dhth/kplay"
-  version "0.1.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/kplay/releases/download/v0.1.0/kplay_0.1.0_darwin_arm64.tar.gz"
-      sha256 "d88d1fd87238fc142bf0963bd247a435acdcbbf6ec603e6ae3167c78d7c2093f"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/kplay/releases/download/v1.0.0/kplay_1.0.0_darwin_amd64.tar.gz"
+      sha256 "7afcf40298f80d7bd021fcbc327aeb886c5e870b23887b2224fe76cebcbbcbea"
 
       def install
         bin.install "kplay"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/kplay/releases/download/v0.1.0/kplay_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6d15c6990d712da22d2154d058b7d47d584aace1ce7e2e1bb35fc1e69fa1554b"
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/kplay/releases/download/v1.0.0/kplay_1.0.0_darwin_arm64.tar.gz"
+      sha256 "cfd7525b9f84fca5f989a3e71bcf4cb542c792826ec1e5aa217276fa6ec6913c"
 
       def install
         bin.install "kplay"
@@ -28,20 +28,24 @@ class Kplay < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/kplay/releases/download/v0.1.0/kplay_0.1.0_linux_arm64.tar.gz"
-      sha256 "09b35aa82c43e580cb6070ee975ea17d150731d75a21b97a702e02244863c2df"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/kplay/releases/download/v1.0.0/kplay_1.0.0_linux_amd64.tar.gz"
+        sha256 "c4e71b4a00443959380753eea1b1d545b714e78ec888c9dab28378b6ae6e5938"
 
-      def install
-        bin.install "kplay"
+        def install
+          bin.install "kplay"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/kplay/releases/download/v0.1.0/kplay_0.1.0_linux_amd64.tar.gz"
-      sha256 "dcd264af180356c407900d0aa1454b88d84788225ee8932e50f2933857c1f5fa"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/dhth/kplay/releases/download/v1.0.0/kplay_1.0.0_linux_arm64.tar.gz"
+        sha256 "72f68423c99f777d99a906d30c8eae6f70100a70c490e26d2f5113d1b4fa62cb"
 
-      def install
-        bin.install "kplay"
+        def install
+          bin.install "kplay"
+        end
       end
     end
   end
