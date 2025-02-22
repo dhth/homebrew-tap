@@ -5,21 +5,21 @@
 class Hours < Formula
   desc "A no-frills time tracking toolkit for the command line"
   homepage "https://github.com/dhth/hours"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/hours/releases/download/v0.4.1/hours_0.4.1_darwin_amd64.tar.gz"
-      sha256 "878a31f23f4540ed13b0177f2103a14e3e87eeb9be3edab87b522a19f9f4f06b"
+      url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_darwin_amd64.tar.gz"
+      sha256 "1bed2bfc79d7e5a5f30f994d377e598ddcfbdb81deff49f7c69455d68144f1aa"
 
       def install
         bin.install "hours"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/hours/releases/download/v0.4.1/hours_0.4.1_darwin_arm64.tar.gz"
-      sha256 "216686f7e0f6f39c36995cea4065aec1ee950476254cfdcc8d944b747d274baf"
+      url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_darwin_arm64.tar.gz"
+      sha256 "41317f52242f74fae8bfcb18b9ae1ae44b8cd0918bfbf0283c174bffad3132d2"
 
       def install
         bin.install "hours"
@@ -30,8 +30,8 @@ class Hours < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.4.1/hours_0.4.1_linux_amd64.tar.gz"
-        sha256 "26ed4a4358bcf1134b316db0d9867fe66454e69a092d47694075df27ef7a6d18"
+        url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_linux_amd64.tar.gz"
+        sha256 "9bf016633fdacbde65e61266fa5f9e919a014115b8149202027fbf6f61634aea"
 
         def install
           bin.install "hours"
@@ -40,8 +40,8 @@ class Hours < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.4.1/hours_0.4.1_linux_arm64.tar.gz"
-        sha256 "79f934fd8b389ffc7ba7cadc2183a55f325bf40b5e729d8aef70d44141c8dc20"
+        url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_linux_arm64.tar.gz"
+        sha256 "e24c3a9cc67eb45bdd6533016e974f3325c12cb763c00cdfa8e88b156efd43d7"
 
         def install
           bin.install "hours"
