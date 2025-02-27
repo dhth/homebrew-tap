@@ -1,21 +1,22 @@
 class Bmm < Formula
   desc "bmm lets you get to your bookmarks in a flash"
   homepage "https://tools.dhruvs.space/bmm/"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/bmm/releases/download/v0.1.0/bmm-aarch64-apple-darwin.tar.xz"
-      sha256 "ac3135f8ee8e11fcbfd196018894f8f4f0f47ada7d23ad19bd646d9dd503995d"
+      url "https://github.com/dhth/bmm/releases/download/v0.2.0/bmm-aarch64-apple-darwin.tar.xz"
+      sha256 "3a07259bb431d02bef65999ab074c74b5ade22ec217bdf72e385f99118637007"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/bmm/releases/download/v0.1.0/bmm-x86_64-apple-darwin.tar.xz"
-      sha256 "52589d73825f036adc960f416e0ed8a48a3df0c5d3ae4a9afa2381f2e7eeac35"
+      url "https://github.com/dhth/bmm/releases/download/v0.2.0/bmm-x86_64-apple-darwin.tar.xz"
+      sha256 "44b1fed36a5aedef4f3512a0d6e7e7ae8b6b8746a36b7c9339252825b86e3581"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/bmm/releases/download/v0.1.0/bmm-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "f603035923391893894099cd7d895d6139f1e790a394e0bd197ca7c8bb8871ff"
+    url "https://github.com/dhth/bmm/releases/download/v0.2.0/bmm-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "159c3f08e5ba3871f3a9a47f800ad28f4d50da8fe86982e707f9bfc98fd53933"
   end
+  license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
