@@ -5,21 +5,21 @@
 class Ecsv < Formula
   desc "Quickly check the versions of your systems running in ECS tasks across various environments"
   homepage "https://github.com/dhth/ecsv"
-  version "1.4.0"
+  version "1.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecsv/releases/download/v1.4.0/ecsv_1.4.0_darwin_amd64.tar.gz"
-      sha256 "bdb12f917a5b7baf1c48bedafc3aeb4d500d8a3e7239d354cc550b88ab31d93e"
+      url "https://github.com/dhth/ecsv/releases/download/v1.4.1/ecsv_1.4.1_darwin_amd64.tar.gz"
+      sha256 "e5d8d72a4ff80e93c822d823eb7d0f04d397c2e20868e63fc5c17332f4da33ce"
 
       def install
         bin.install "ecsv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/ecsv/releases/download/v1.4.0/ecsv_1.4.0_darwin_arm64.tar.gz"
-      sha256 "fee5ed994bd7cc14015c0c68868c43e308f090516901aa932752fcec1a1d5bb5"
+      url "https://github.com/dhth/ecsv/releases/download/v1.4.1/ecsv_1.4.1_darwin_arm64.tar.gz"
+      sha256 "bd718bb30bc45fa618aeadb80726d7c2cbffef3378378a999688c5c4cbbab841"
 
       def install
         bin.install "ecsv"
@@ -30,8 +30,8 @@ class Ecsv < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/ecsv/releases/download/v1.4.0/ecsv_1.4.0_linux_amd64.tar.gz"
-        sha256 "fab77848d70dda9124b022124d586a91a356fb02b2fa516362ee44d855bf6ebf"
+        url "https://github.com/dhth/ecsv/releases/download/v1.4.1/ecsv_1.4.1_linux_amd64.tar.gz"
+        sha256 "c4aa93131423520956e61c55db6406caa2461b1b4a2251cbcbefd4673f969cff"
 
         def install
           bin.install "ecsv"
@@ -40,8 +40,8 @@ class Ecsv < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/ecsv/releases/download/v1.4.0/ecsv_1.4.0_linux_arm64.tar.gz"
-        sha256 "ff3f3e3fe820f28271db47bb9c6c2cf69b3e12fef35a98436df1a4054a8ffbfb"
+        url "https://github.com/dhth/ecsv/releases/download/v1.4.1/ecsv_1.4.1_linux_arm64.tar.gz"
+        sha256 "0ca385684ad59b379f174a643d84bdb3d83f370bb82df3a9ca6fb2c6c2788e95"
 
         def install
           bin.install "ecsv"
