@@ -5,16 +5,16 @@ class Ecscope < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-aarch64-apple-darwin.tar.xz"
-      sha256 "e4adff964ed8182a05e83c60759b02cff8cf3258c0b64d010c55daaee9acf6ea"
+      sha256 "2bd91bb4eb3e5016f5be6641824e6ea46e00ddc4c2a04b070d34f32042e14591"
     end
     if Hardware::CPU.intel?
       url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-x86_64-apple-darwin.tar.xz"
-      sha256 "7083bc18150cfc492be56317e5b87a3a97ef944dfd5f88a4abca83ac9aa5c9d4"
+      sha256 "4f0bd13a103d5e5d8f3dfecfcf09ef5847bf72bfff433da39d259edf1aae24c1"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "a4511939b5b5630da7b5eb7b902a33c7774571fbf8d27b46cf34724477574dfa"
+    sha256 "5009103749b521a1f42865ca88f81adb28527e0a56cf81251f37014dcadb7017"
   end
   license "MIT"
 
