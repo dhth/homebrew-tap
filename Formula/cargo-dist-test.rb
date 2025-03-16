@@ -1,25 +1,29 @@
 class CargoDistTest < Formula
   desc "just a test repo"
   homepage "https://github.com/dhth/cargo-dist-test"
-  version "0.1.5"
+  version "0.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.5/cargo-dist-test-aarch64-apple-darwin.tar.xz"
-      sha256 "25e55e3914c6eaa95c8505934bd1d95a083694469db7e6fd650cfa3c792b6fe3"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-aarch64-apple-darwin.tar.xz"
+      sha256 "0f37c644700e7b1c389ec86dc2508bd430fa7a48c74f6ad7e6267cbfa5b0c2a3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.5/cargo-dist-test-x86_64-apple-darwin.tar.xz"
-      sha256 "83f0cb16836e2ca73cf7849cc443ae503e83daee552bd202d287eccacdb88e16"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-x86_64-apple-darwin.tar.xz"
+      sha256 "19496c23291b94a309dc63e1813d2dd1d1c4d2a92815a24da546006415e35655"
     end
   end
-  if OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.5/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4f7bd831b1fb99f58f76bbd2c9b5436ab476f0e91041ae03da28853a342344ce"
-    end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "dbd7ef00f0f1437748f6b3a0cde3febd40bebff346815bc3e2dcc80fb9d2c069"
   end
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-unknown-linux-gnu": {}, "x86_64-unknown-linux-musl-dynamic": {}, "x86_64-unknown-linux-musl-static": {}}
+  BINARY_ALIASES = {
+    "aarch64-apple-darwin":              {},
+    "x86_64-apple-darwin":               {},
+    "x86_64-unknown-linux-gnu":          {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static":  {},
+  }.freeze
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -37,15 +41,9 @@ class CargoDistTest < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "cargo-dist-test"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "cargo-dist-test"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "cargo-dist-test"
-    end
+    bin.install "cargo-dist-test" if OS.mac? && Hardware::CPU.arm?
+    bin.install "cargo-dist-test" if OS.mac? && Hardware::CPU.intel?
+    bin.install "cargo-dist-test" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
