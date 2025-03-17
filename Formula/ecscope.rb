@@ -1,20 +1,20 @@
 class Ecscope < Formula
   desc "ecscope lets you monitor AWS ECS resources from the terminal"
   homepage "https://tools.dhruvs.space/ecscope/"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-aarch64-apple-darwin.tar.xz"
-      sha256 "2bd91bb4eb3e5016f5be6641824e6ea46e00ddc4c2a04b070d34f32042e14591"
+      url "https://github.com/dhth/ecscope/releases/download/v0.3.0/ecscope-aarch64-apple-darwin.tar.xz"
+      sha256 "0e46fd7facdfd33f18b7adc840c867fdac1657958845ee40f8345bee8a84350a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-x86_64-apple-darwin.tar.xz"
-      sha256 "4f0bd13a103d5e5d8f3dfecfcf09ef5847bf72bfff433da39d259edf1aae24c1"
+      url "https://github.com/dhth/ecscope/releases/download/v0.3.0/ecscope-x86_64-apple-darwin.tar.xz"
+      sha256 "d00455fcfb5dc1914e52732367af31dbd06eaa71a82fb756a3fa6599b4b5c1ed"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/ecscope/releases/download/v0.2.0/ecscope-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "5009103749b521a1f42865ca88f81adb28527e0a56cf81251f37014dcadb7017"
+    url "https://github.com/dhth/ecscope/releases/download/v0.3.0/ecscope-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "c27b0dfd265a6cb25f1a37e603812eda629673852ccbdc9576b874c8536c547c"
   end
   license "MIT"
 
