@@ -5,21 +5,21 @@
 class Cueitup < Formula
   desc "Inspect messages in an AWS SQS queue in a simple and deliberate manner"
   homepage "https://github.com/dhth/cueitup"
-  version "0.2.2"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.2/cueitup_0.2.2_darwin_amd64.tar.gz"
-      sha256 "5571de68240d7c5b9f53987a754a432e70c4d3ad9043dd4c6b22a82164f582c1"
+      url "https://github.com/dhth/cueitup/releases/download/v1.0.0/cueitup_1.0.0_darwin_amd64.tar.gz"
+      sha256 "00ab2283cfbfcf8f81c0f15b5abaf005ce464cee14de6c81b7ffb0dd3b258a1d"
 
       def install
         bin.install "cueitup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/cueitup/releases/download/v0.2.2/cueitup_0.2.2_darwin_arm64.tar.gz"
-      sha256 "87a22573c74b125c52e719b7a358b561c1346b34dd4dccc2aa681a7d614b3c81"
+      url "https://github.com/dhth/cueitup/releases/download/v1.0.0/cueitup_1.0.0_darwin_arm64.tar.gz"
+      sha256 "60ff841c169eda4b5eaab61e2dd93f3634de1d5abf4c461d546f7dead26756d3"
 
       def install
         bin.install "cueitup"
@@ -30,8 +30,8 @@ class Cueitup < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/cueitup/releases/download/v0.2.2/cueitup_0.2.2_linux_amd64.tar.gz"
-        sha256 "359089c6a20092ff466c76b8c5e8cacf18ad20503a7db817befbeed49e2b2e54"
+        url "https://github.com/dhth/cueitup/releases/download/v1.0.0/cueitup_1.0.0_linux_amd64.tar.gz"
+        sha256 "e427e33fc6964b78cb070bdc88a6dc21469efc0957c923e556c3ffc0798cc15f"
 
         def install
           bin.install "cueitup"
@@ -40,8 +40,8 @@ class Cueitup < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/cueitup/releases/download/v0.2.2/cueitup_0.2.2_linux_arm64.tar.gz"
-        sha256 "b24bd59b51cc75c4d57d719379c8df5dc7d9245f0168a275a47173736439f582"
+        url "https://github.com/dhth/cueitup/releases/download/v1.0.0/cueitup_1.0.0_linux_arm64.tar.gz"
+        sha256 "25b6fd6aae5a58423540ed4140b5ec0f1ac6b5e96aa4930fd99d868ad142ce05"
 
         def install
           bin.install "cueitup"
