@@ -1,25 +1,25 @@
 class Mrj < Formula
   desc "mrj merges your open dependency upgrade PRs"
   homepage "https://tools.dhruvs.space/mrj"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.1.0/mrj-aarch64-apple-darwin.tar.xz"
-      sha256 "af844d08b55026afdb52a2696f45778931129e684b1d304f310200e51aaed883"
+      url "https://github.com/dhth/mrj/releases/download/v0.2.0/mrj-aarch64-apple-darwin.tar.xz"
+      sha256 "d1dab2d80c822e6aa302d65b11d6ff9331c40cb03cc6e5465d7e6cb4a09538a8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.1.0/mrj-x86_64-apple-darwin.tar.xz"
-      sha256 "1e595a2fb5f34f3bed1b3fc2521c72a157499e29ddcc68ab79ecca86b4287523"
+      url "https://github.com/dhth/mrj/releases/download/v0.2.0/mrj-x86_64-apple-darwin.tar.xz"
+      sha256 "12c87f8b9c67fd36a1ffd6368ac7dec69964b88f5e3f39b95e59d511ad9ac827"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.1.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "198b733202db557deaaef704fa96affbe697b8d8c260f9186953bf23ad3ddfb8"
+      url "https://github.com/dhth/mrj/releases/download/v0.2.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3a52a040194cc6b4299a62a5afb9e273b35ebd3bd6006542017bdd6b75c2f02f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.1.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "95772302b4d4c3371219654f57a65386d28f4a4be6327ced79d5ee161c818615"
+      url "https://github.com/dhth/mrj/releases/download/v0.2.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a955fbf2594217b070aba6b3c18a06fff9db62efbb2a910f3c28567cae152cf1"
     end
   end
   license "MIT"
