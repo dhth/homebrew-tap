@@ -1,20 +1,20 @@
 class Dfft < Formula
   desc "monitor changes as AI agents modify your codebase"
   homepage "https://tools.dhruvs.space/dfft/"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/dfft/releases/download/v0.1.0/dfft-aarch64-apple-darwin.tar.xz"
-      sha256 "8cfdbeb525fc6f6f6d806691c4c5627f75461ca1e11d28ac0045785b31b70c08"
+      url "https://github.com/dhth/dfft/releases/download/v0.1.1/dfft-aarch64-apple-darwin.tar.xz"
+      sha256 "151dd8e19fcb3900a4e215fd80e7d3e31c0fa2d61c8d0a092938432efb124041"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/dfft/releases/download/v0.1.0/dfft-x86_64-apple-darwin.tar.xz"
-      sha256 "9f51cbfb86332da8f07cb512b45db02cace491325a7fae3e1545b22f70eaf399"
+      url "https://github.com/dhth/dfft/releases/download/v0.1.1/dfft-x86_64-apple-darwin.tar.xz"
+      sha256 "5823932363ef8a96ca8be984faefd0126461d30fda96ee2afc4ad293e4b53108"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/dfft/releases/download/v0.1.0/dfft-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "8eb633f24311cc7583e5a7045596fac9fa1b2ffae125fc09c8498eacfd6f4ea9"
+    url "https://github.com/dhth/dfft/releases/download/v0.1.1/dfft-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "87c278b234d2d0a3db6e6d122d2a1f1b36197073d80ab55e460458dd114823f6"
   end
   license "MIT"
 
