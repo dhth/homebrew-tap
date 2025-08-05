@@ -5,21 +5,21 @@
 class Mult < Formula
   desc "Run a command multiple times and glance at the outputs"
   homepage "https://github.com/dhth/mult"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/dhth/mult/releases/download/v0.1.3/mult_0.1.3_darwin_amd64.tar.gz"
-      sha256 "8d8c9088578a0cae0a90a90fb8316745545f4d7e0564eecd530653f811ef5941"
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/mult/releases/download/v0.2.0/mult_0.2.0_darwin_amd64.tar.gz"
+      sha256 "d8e6551b8fbd620d555f1d035e7956d43887d77106df9943d4cc25ef0504bca7"
 
       def install
         bin.install "mult"
       end
     end
-    on_arm do
-      url "https://github.com/dhth/mult/releases/download/v0.1.3/mult_0.1.3_darwin_arm64.tar.gz"
-      sha256 "beb8b540f5398de3f3cd13bde0dcd7c4a855e38368c106c682adf9fd8d160736"
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/mult/releases/download/v0.2.0/mult_0.2.0_darwin_arm64.tar.gz"
+      sha256 "098e19853d2031eaf72c660e979bb99286a3fc7fb5f60c48b56420e53959eda1"
 
       def install
         bin.install "mult"
@@ -28,24 +28,18 @@ class Mult < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/mult/releases/download/v0.1.3/mult_0.1.3_linux_amd64.tar.gz"
-        sha256 "7003adcd2f5a7053a46500de06c3803f69f932a37689f0b39fdbb96254125d44"
-
-        def install
-          bin.install "mult"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/mult/releases/download/v0.2.0/mult_0.2.0_linux_amd64.tar.gz"
+      sha256 "723a32822f518afe61f1f7558270ec1aa8bf43cef6470536fb18a6e64250db2b"
+      def install
+        bin.install "mult"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/mult/releases/download/v0.1.3/mult_0.1.3_linux_arm64.tar.gz"
-        sha256 "0f35bd8187550c268b3c0450d758fb6c96a5fdd015ddb42a30a3718ae5aea6c6"
-
-        def install
-          bin.install "mult"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/mult/releases/download/v0.2.0/mult_0.2.0_linux_arm64.tar.gz"
+      sha256 "6ad4ddf67e0ae51217ecf6872cdb71408f272378f79aef0239e8e628ae6ac319"
+      def install
+        bin.install "mult"
       end
     end
   end
