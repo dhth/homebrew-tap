@@ -1,20 +1,20 @@
 class CargoDistTest < Formula
   desc "just a test repo"
   homepage "https://github.com/dhth/cargo-dist-test"
-  version "0.1.6"
+  version "0.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-aarch64-apple-darwin.tar.xz"
-      sha256 "0f37c644700e7b1c389ec86dc2508bd430fa7a48c74f6ad7e6267cbfa5b0c2a3"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-aarch64-apple-darwin.tar.xz"
+      sha256 "f4d721524fb821465b9c4d3ea89084244e0c29ccd3ad7c6603eeec609275aab1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-x86_64-apple-darwin.tar.xz"
-      sha256 "19496c23291b94a309dc63e1813d2dd1d1c4d2a92815a24da546006415e35655"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-x86_64-apple-darwin.tar.xz"
+      sha256 "5e28779c0f83ab4c2a741fb049a2ffbc4cb1f88811917db17411212ad588f3df"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.6/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "dbd7ef00f0f1437748f6b3a0cde3febd40bebff346815bc3e2dcc80fb9d2c069"
+    url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "99ff75a7fd01cd533104f6b8d6152e2117b209cbd83d8ecc6da5b53e9d1cabae"
   end
 
   BINARY_ALIASES = {
