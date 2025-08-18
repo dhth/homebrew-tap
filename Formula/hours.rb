@@ -5,21 +5,21 @@
 class Hours < Formula
   desc "A no-frills time tracking toolkit for the command line"
   homepage "https://github.com/dhth/hours"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_darwin_amd64.tar.gz"
-      sha256 "1bed2bfc79d7e5a5f30f994d377e598ddcfbdb81deff49f7c69455d68144f1aa"
+      url "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_darwin_amd64.tar.gz"
+      sha256 "c313be15a69070876e89a0332dcfd36e843e4b9f162cffeb0e46d96d6104cd0d"
 
       def install
         bin.install "hours"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_darwin_arm64.tar.gz"
-      sha256 "41317f52242f74fae8bfcb18b9ae1ae44b8cd0918bfbf0283c174bffad3132d2"
+      url "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_darwin_arm64.tar.gz"
+      sha256 "daf3da450ec8435099b02a57125cd8eed327f25d422fc3ae091d4f4235636fc7"
 
       def install
         bin.install "hours"
@@ -28,24 +28,18 @@ class Hours < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_linux_amd64.tar.gz"
-        sha256 "9bf016633fdacbde65e61266fa5f9e919a014115b8149202027fbf6f61634aea"
-
-        def install
-          bin.install "hours"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_amd64.tar.gz"
+      sha256 "f4971c92a17919c3a16e77796e41af829736c837f7cf85154f7549d154b998ca"
+      def install
+        bin.install "hours"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/dhth/hours/releases/download/v0.5.0/hours_0.5.0_linux_arm64.tar.gz"
-        sha256 "e24c3a9cc67eb45bdd6533016e974f3325c12cb763c00cdfa8e88b156efd43d7"
-
-        def install
-          bin.install "hours"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_linux_arm64.tar.gz"
+      sha256 "dceace8bcdab8baec65b38709df688eb35b166ba51f757f67976c08130531c1d"
+      def install
+        bin.install "hours"
       end
     end
   end
