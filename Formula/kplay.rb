@@ -5,21 +5,21 @@
 class Kplay < Formula
   desc "Inspect messages in a Kafka topic in a simple and deliberate manner"
   homepage "https://github.com/dhth/kplay"
-  version "3.0.0"
+  version "3.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/kplay/releases/download/v3.0.0/kplay_3.0.0_darwin_amd64.tar.gz"
-      sha256 "363571cc263debd365f5b19cce4b0f7986bb4291f80e7aafed6f22cdd131697d"
+      url "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_darwin_amd64.tar.gz"
+      sha256 "f23e96799c01b76b203d8636cab8b940fb500da7a47229140964409538f0c7c9"
 
       def install
         bin.install "kplay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/kplay/releases/download/v3.0.0/kplay_3.0.0_darwin_arm64.tar.gz"
-      sha256 "f70b0792ce6a8aca0c30df2c9350d5bfab9e1bff43ef9016dcdd2ece95aeaac9"
+      url "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_darwin_arm64.tar.gz"
+      sha256 "17100ed84161d07debaf913255a902902c48f5718234bd81d4016a38bdffcf45"
 
       def install
         bin.install "kplay"
@@ -29,15 +29,15 @@ class Kplay < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/kplay/releases/download/v3.0.0/kplay_3.0.0_linux_amd64.tar.gz"
-      sha256 "702288866f6074eec559c0d588aedd30b9c813f9628c69bb603a78f668c42855"
+      url "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_amd64.tar.gz"
+      sha256 "40b750f1dd2ebbfc887505e4394ee29e594488fb607c48c1910e2cddb79c4f11"
       def install
         bin.install "kplay"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/kplay/releases/download/v3.0.0/kplay_3.0.0_linux_arm64.tar.gz"
-      sha256 "3436dd6d80dce68f0e45674844af533ef88b809cfd7c5db12776a9d2d034d86a"
+      url "https://github.com/dhth/kplay/releases/download/v3.1.0/kplay_3.1.0_linux_arm64.tar.gz"
+      sha256 "b754a0431056146a4dd0d5479caf3489121d7106460bde8a2904251cab5f7add"
       def install
         bin.install "kplay"
       end
