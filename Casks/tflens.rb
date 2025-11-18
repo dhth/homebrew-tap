@@ -3,7 +3,7 @@ cask "tflens" do
   name "tflens"
   desc "tflens offers tiny utilities for terraform/opentofu/terragrunt codebases"
   homepage "https://github.com/dhth/tflens"
-  version "0.1.0-alpha.5"
+  version "0.1.0-alpha.6"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "tflens" do
   on_macos do
     on_intel do
       url "https://github.com/dhth/tflens/releases/download/v#{version}/tflens_#{version}_darwin_amd64.tar.gz"
-      sha256 "3e1b3bcb300a2e0d8cf36fdb5c92a9eb4d4948c69c294f3ae35834524dc0bf59"
+      sha256 "2f723b6fc7fd8cfd3870186e81b0d5bea0ea38c0998a2caf1db72eb584d97faa"
     end
     on_arm do
       url "https://github.com/dhth/tflens/releases/download/v#{version}/tflens_#{version}_darwin_arm64.tar.gz"
-      sha256 "bb42f333ba88554044b64d5ab64544a03e6ecb191d5f66adc25cd25741159c94"
+      sha256 "342ea3059880b666ba7ab0ccbb90a23f2f90ec6d4823d1a61aab1cb17605757c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dhth/tflens/releases/download/v#{version}/tflens_#{version}_linux_amd64.tar.gz"
-      sha256 "50ac81645c8c40d6e838a751b382b55f2734f14fb34a45512faa9600f79f61e4"
+      sha256 "8f26cad9ed82c7126ac8138470d48ce84816750db4b6e956ae3b9d0b50c0b5c7"
     end
     on_arm do
       url "https://github.com/dhth/tflens/releases/download/v#{version}/tflens_#{version}_linux_arm64.tar.gz"
-      sha256 "f9f6cc4d27951ce4b0d8d88b3a3dae2aa927dff51ce15e21dd572e75fd7b8e78"
+      sha256 "be4f5ce5aa6d123cf61a2e65c7db68932c9410bcee96b8ab26beb03bbb975742"
     end
   end
 
