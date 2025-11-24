@@ -1,36 +1,34 @@
 class Mrj < Formula
   desc "mrj merges your open dependency upgrade PRs"
   homepage "https://tools.dhruvs.space/mrj"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.3.0/mrj-aarch64-apple-darwin.tar.xz"
-      sha256 "b1faddbb0e4a72c88486ad1e7d5019fbbe68fdc0a30f3a38a939ab5716d45822"
+      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-aarch64-apple-darwin.tar.xz"
+      sha256 "2b187babb439ce135ffd11ce8e0dd182ad70530288c7d56a1bb500df8ee58564"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.3.0/mrj-x86_64-apple-darwin.tar.xz"
-      sha256 "86552571d27950487210c887b7c0a40fbc0f7317e80b13c84045e2ee8f2fad8c"
+      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-x86_64-apple-darwin.tar.xz"
+      sha256 "4d02a512a7b195556e17267168dc020b7193489496e07930f0fa22d7dc8c8998"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.3.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6bc6832ad8e6c481d9f8e466c0a867787a818836cc46e0105b97e8d89b5aa343"
+      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a12a3444d93a6b21e07f6fc9f6ca863e77a0210d88bb28d29d16da449c39a801"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.3.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4e6ff4431075aed719ee05469a940c12a55ec36ad3e5502a1f4ddb789f64cf3e"
+      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f7d5b098332bf025055020f4aa3233596a932e8b89406e5c682bb46f0d065f8e"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":              {},
-    "aarch64-unknown-linux-gnu":         {},
-    "x86_64-apple-darwin":               {},
-    "x86_64-unknown-linux-gnu":          {},
-    "x86_64-unknown-linux-musl-dynamic": {},
-    "x86_64-unknown-linux-musl-static":  {},
+    "aarch64-apple-darwin":      {},
+    "aarch64-unknown-linux-gnu": {},
+    "x86_64-apple-darwin":       {},
+    "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
   def target_triple
