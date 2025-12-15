@@ -1,19 +1,19 @@
 class Grafq < Formula
   desc "query Neo4j/AWS Neptune databases via an interactive console"
   homepage "https://github.com/dhth/grafq"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/dhth/grafq/releases/download/v0.1.0/grafq-aarch64-apple-darwin.tar.xz"
-    sha256 "9e933c65b7a8bff19c3bb22f82324dc67fb03f84ea64315aff0b476589dee2af"
+    url "https://github.com/dhth/grafq/releases/download/v0.1.1/grafq-aarch64-apple-darwin.tar.xz"
+    sha256 "15d0eeccebb58c470d9c3713dcfe5bf0299e8331cb9d319166b456d547a3c2f6"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/grafq/releases/download/v0.1.0/grafq-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0c8bc11762914b20613ae8691e6a5545730c1235527ead8e36e0819fccfa4123"
+      url "https://github.com/dhth/grafq/releases/download/v0.1.1/grafq-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9794c91dc5eaf64096ab4855be9b71c1d15e22b634996d15961116fe9108eff7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/grafq/releases/download/v0.1.0/grafq-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4595b3fbdb206c88ac3b4aafda0c4ab857b53659a382b74029629c23ceef9e55"
+      url "https://github.com/dhth/grafq/releases/download/v0.1.1/grafq-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "42a606b10018a690ea181ff140e325a4ff4cb6c1142a8c4c3966ce0e870fe4e3"
     end
   end
   license "MIT"
