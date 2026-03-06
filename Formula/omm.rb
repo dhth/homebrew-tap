@@ -5,40 +5,40 @@
 class Omm < Formula
   desc "omm is a keyboard-driven task manager for the command line"
   homepage "https://github.com/dhth/omm"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/omm/releases/download/v0.6.0/omm_0.6.0_darwin_amd64.tar.gz"
-      sha256 "ed6b2acefd62a86f5c7deca967983de9400d1a7a6ef501c6dc7e7a93acc71ffb"
+      url "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_darwin_amd64.tar.gz"
+      sha256 "6b925a5b9e8fa1eb7ceceded9c404e53affbb302cfc66b40dad2402203e9baa3"
 
-      def install
+      define_method(:install) do
         bin.install "omm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/omm/releases/download/v0.6.0/omm_0.6.0_darwin_arm64.tar.gz"
-      sha256 "6058aaf5be185e96ee5995cb7ca3cbff1d3ade3b0b57072fd5f98dcd9b1d4b52"
+      url "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_darwin_arm64.tar.gz"
+      sha256 "1cf6eaf5dc8c0b09de7c042ba38e12284b66068dc0e28740d436f492247157c1"
 
-      def install
+      define_method(:install) do
         bin.install "omm"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/omm/releases/download/v0.6.0/omm_0.6.0_linux_amd64.tar.gz"
-      sha256 "73e77d5ad963b6ab31c5a1eb16df5fc1bd972fe5cc7917b45c84c4bcf4b4035f"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_amd64.tar.gz"
+      sha256 "95f6e51ecff1bddc69e7813f5117e441b3921b8ed051922a8de020da8b4d35f0"
+      define_method(:install) do
         bin.install "omm"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/omm/releases/download/v0.6.0/omm_0.6.0_linux_arm64.tar.gz"
-      sha256 "825e44b3f017252fe7ebb20883dfc1c66d7a918516a84b38ab75e09b394659cb"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/omm/releases/download/v0.7.0/omm_0.7.0_linux_arm64.tar.gz"
+      sha256 "377296286d6cb771fb402dfff9295ed28bf9b1d5b945881e40564f68ab133e9a"
+      define_method(:install) do
         bin.install "omm"
       end
     end
