@@ -5,40 +5,40 @@
 class Punchout < Formula
   desc "punchout takes the suck out of logging time on JIRA"
   homepage "https://github.com/dhth/punchout"
-  version "1.3.0"
+  version "1.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/punchout/releases/download/v1.3.0/punchout_1.3.0_darwin_amd64.tar.gz"
-      sha256 "904e30863475100b04a73a35f01bb475bfecd24ba611266571ee7424605fcb98"
+      url "https://github.com/dhth/punchout/releases/download/v1.4.0/punchout_1.4.0_darwin_amd64.tar.gz"
+      sha256 "c92c0f4c91cc8fc8c6743f7ead17af4b0cca342df2c7df8a70c431aaac0991a1"
 
-      def install
+      define_method(:install) do
         bin.install "punchout"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/punchout/releases/download/v1.3.0/punchout_1.3.0_darwin_arm64.tar.gz"
-      sha256 "a92e693cda0fd98e248aead0afc081acb2af35ddcaff841a5f90c0535c145fcf"
+      url "https://github.com/dhth/punchout/releases/download/v1.4.0/punchout_1.4.0_darwin_arm64.tar.gz"
+      sha256 "cb3bbec06f2d0c219540dd4a3607b6335498ffff09aadd086d28fd6c1e79046a"
 
-      def install
+      define_method(:install) do
         bin.install "punchout"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/punchout/releases/download/v1.3.0/punchout_1.3.0_linux_amd64.tar.gz"
-      sha256 "779ed91d1e9e99bac331daefdbbafb2e5c33ad1969454fcd354fa2dc156d2390"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/punchout/releases/download/v1.4.0/punchout_1.4.0_linux_amd64.tar.gz"
+      sha256 "375c13a387e3ada6eb25575f0bf6cb9e3df304bd7be945d4da03e72dc6eb0e1c"
+      define_method(:install) do
         bin.install "punchout"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/dhth/punchout/releases/download/v1.3.0/punchout_1.3.0_linux_arm64.tar.gz"
-      sha256 "dfe8c50deeed0aca7aa656c7cf2130d2853201d6f890a565958e65d9ebb15794"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dhth/punchout/releases/download/v1.4.0/punchout_1.4.0_linux_arm64.tar.gz"
+      sha256 "88792ac08a77754cb55b84968760408a48aef776cd8fefb0f1a4e09896e0f3a7"
+      define_method(:install) do
         bin.install "punchout"
       end
     end
