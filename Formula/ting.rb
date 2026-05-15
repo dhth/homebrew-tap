@@ -1,20 +1,20 @@
 class Ting < Formula
   desc "audio feedback on the command line"
   homepage "https://tools.dhruvs.space/ting/"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/ting/releases/download/v0.1.0/ting-aarch64-apple-darwin.tar.xz"
-      sha256 "0264b517357aaa89528cf807f704d487173f7cc40ddacab2c931f958731f1d56"
+      url "https://github.com/dhth/ting/releases/download/v0.1.1/ting-aarch64-apple-darwin.tar.xz"
+      sha256 "79fc577369fa31e92ea649d9c3b8b11239c8969a489fd0faed6d3f4d39963bc8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/ting/releases/download/v0.1.0/ting-x86_64-apple-darwin.tar.xz"
-      sha256 "5a4c4d46f9f6438786f0c89eeff68a10cd3220606aebba6b44183a9a8c5baf7b"
+      url "https://github.com/dhth/ting/releases/download/v0.1.1/ting-x86_64-apple-darwin.tar.xz"
+      sha256 "b13bee21ac5216a05891d0e7acf0652c31dd15387b36341a87f5e55e3eb6ecaa"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/ting/releases/download/v0.1.0/ting-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "35c4de1d634577adb16facc4171c071bc01ec467047aca8085f2d08fe0d1661e"
+    url "https://github.com/dhth/ting/releases/download/v0.1.1/ting-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "d38d06f7729494a05b8603e87451ba06333377888eeb693481918ab8e9f48f80"
   end
   license "MIT"
 
