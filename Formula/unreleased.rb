@@ -1,25 +1,25 @@
 class Unreleased < Formula
   desc "view the commits to your GitHub repos since their last release"
   homepage "https://tools.dhruvs.space/unreleased"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/unreleased/releases/download/v0.1.0/unreleased-aarch64-apple-darwin.tar.xz"
-      sha256 "511286906d2c3fcbb54835b3ec0c4b1d6f4ea63b309bfe3612e1443c03679734"
+      url "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-aarch64-apple-darwin.tar.xz"
+      sha256 "4c1de6c727c94d1e0da39ebc6a660d03576c4ae126a399d1f54aa3b10a7a96e2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/unreleased/releases/download/v0.1.0/unreleased-x86_64-apple-darwin.tar.xz"
-      sha256 "da4df2d1fb6eca66cf444c0c73303236b9570a6a4490dc4c8e7ca1b673c956cb"
+      url "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-x86_64-apple-darwin.tar.xz"
+      sha256 "f17b935e4e10ebec8dff179502ce55292b6d682092dc4608c414499a5d128d80"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/unreleased/releases/download/v0.1.0/unreleased-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "30ad43b9dc0913dd3406cdce5e2f01cb9a8cff1d0240df7262958027d6cdca9b"
+      url "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0e797e15776170a595b657646a0c8cd50131d91ba783722d4b3308df27de67d5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/unreleased/releases/download/v0.1.0/unreleased-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "47736d1bfdd73f4893f3954025809f7a0bc34e47671ed1dfbc61c840bcc3bd18"
+      url "https://github.com/dhth/unreleased/releases/download/v0.1.1/unreleased-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ab4a18f27edf07c54180f04cf5400859df7e6f917a21d886f7a8c4480d884314"
     end
   end
   license "MIT"
