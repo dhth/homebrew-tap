@@ -1,26 +1,19 @@
 class Ecscope < Formula
   desc "ecscope lets you monitor AWS ECS resources from the terminal"
   homepage "https://tools.dhruvs.space/ecscope/"
-  version "0.4.0"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/ecscope/releases/download/v0.4.0/ecscope-aarch64-apple-darwin.tar.xz"
-      sha256 "5178b55e6c407d19b874104bdc321a295c674fcbd7b015c6d362b3a34c8ba18a"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/ecscope/releases/download/v0.4.0/ecscope-x86_64-apple-darwin.tar.xz"
-      sha256 "edacc24953d50bde2709e4489cdb0d357da70e5945f763b84dfb92b882c5a03d"
-    end
+  version "0.4.1"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/dhth/ecscope/releases/download/v0.4.1/ecscope-aarch64-apple-darwin.tar.xz"
+    sha256 "0fa5183e16e4d096502d8aa55188f2a154d2513582c7a3592164daa6a61d43c4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/ecscope/releases/download/v0.4.0/ecscope-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "91ab43691a8d0d2a0e4dce201c06a92d15d78ff53edc277c636c19f2954211c9"
+    url "https://github.com/dhth/ecscope/releases/download/v0.4.1/ecscope-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "c50f2b532659d5f8f1f5c125bc17f6912fec8c35eeef6daf31fc17009cacf1c6"
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
-    "x86_64-apple-darwin":               {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
     "x86_64-unknown-linux-musl-static":  {},
@@ -43,7 +36,6 @@ class Ecscope < Formula
 
   def install
     bin.install "ecscope" if OS.mac? && Hardware::CPU.arm?
-    bin.install "ecscope" if OS.mac? && Hardware::CPU.intel?
     bin.install "ecscope" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
