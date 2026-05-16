@@ -1,25 +1,32 @@
 class Bmm < Formula
   desc "bmm lets you get to your bookmarks in a flash"
   homepage "https://tools.dhruvs.space/bmm/"
-  version "0.3.0"
+  version "0.3.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/bmm/releases/download/v0.3.0/bmm-aarch64-apple-darwin.tar.xz"
-      sha256 "4d0cd0250620e811ed5de9f79048594d6338c6132a22bbb75063b85719a432cc"
+      url "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-aarch64-apple-darwin.tar.xz"
+      sha256 "55639374f14ef8133682658adced2355aa0a1ce553f5f2689c427e15945fa72c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/bmm/releases/download/v0.3.0/bmm-x86_64-apple-darwin.tar.xz"
-      sha256 "e799f85e6dcf35e4dd9d55842722cea66ff382de628a8c94c25eca5ad43cc1d2"
+      url "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-x86_64-apple-darwin.tar.xz"
+      sha256 "2a2d6d7bc9107e5bf68b5d63898078425e9ea915057c1e4c32c0a209788ae2fb"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/bmm/releases/download/v0.3.0/bmm-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "ba78c154e0f69042f206389570a310b3f3eb713d3072e4298334ec5fcb6bd654"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9f55e1279e2641897c0735a5a69cf953cab0e830fc6642e6ba0862026775ff20"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/dhth/bmm/releases/download/v0.3.1/bmm-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "fa61f38ee59a728cfe2ae4e0a2c5b29408cc99132f4b6edb456b622d4d049641"
+    end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
@@ -44,6 +51,7 @@ class Bmm < Formula
   def install
     bin.install "bmm" if OS.mac? && Hardware::CPU.arm?
     bin.install "bmm" if OS.mac? && Hardware::CPU.intel?
+    bin.install "bmm" if OS.linux? && Hardware::CPU.arm?
     bin.install "bmm" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
