@@ -1,25 +1,25 @@
 class Tash < Formula
   desc "stash content that you can access later"
   homepage "https://tools.dhruvs.space/tash/"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/tash/releases/download/v0.1.0/tash-aarch64-apple-darwin.tar.xz"
-      sha256 "a9153613e3915d86cfc984dd5c9222ded41b337a246745c603ecdfec93462295"
+      url "https://github.com/dhth/tash/releases/download/v0.1.1/tash-aarch64-apple-darwin.tar.xz"
+      sha256 "c88237235b67532bf3429530dcfacc53681e26299da2b269ca154c5726a43f95"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tash/releases/download/v0.1.0/tash-x86_64-apple-darwin.tar.xz"
-      sha256 "0be5afa75e8b68948fa33704fa7d0a97ff92914c60f3977e27f0212d57be56ac"
+      url "https://github.com/dhth/tash/releases/download/v0.1.1/tash-x86_64-apple-darwin.tar.xz"
+      sha256 "db4e970323158c4890815652f86fb1e959b892e1b9a44e97cbbe54809ecfa139"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/tash/releases/download/v0.1.0/tash-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "52d01a7a50d3350df71eb6daa91dce4f330f3dea66de2939f76435849994eee5"
+      url "https://github.com/dhth/tash/releases/download/v0.1.1/tash-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9be9ff7c22dd7c50773d33b96d38a9fb7e655afdb285f261901b8e61180a0e16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/tash/releases/download/v0.1.0/tash-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f07369b81fc690688c5a357bbf2789a2291caf1a4f06b2be32432817dc6061dc"
+      url "https://github.com/dhth/tash/releases/download/v0.1.1/tash-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8ddefa5c4e0b481c1f17e5a9c29d6cac7eaaaf75db8f6701529488dab771c928"
     end
   end
   license "MIT"
