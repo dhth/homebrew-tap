@@ -1,25 +1,19 @@
 class Mrj < Formula
   desc "mrj merges your open dependency upgrade PRs"
   homepage "https://tools.dhruvs.space/mrj"
-  version "0.4.0"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-aarch64-apple-darwin.tar.xz"
-      sha256 "2b187babb439ce135ffd11ce8e0dd182ad70530288c7d56a1bb500df8ee58564"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-x86_64-apple-darwin.tar.xz"
-      sha256 "4d02a512a7b195556e17267168dc020b7193489496e07930f0fa22d7dc8c8998"
-    end
+  version "0.5.0"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-aarch64-apple-darwin.tar.xz"
+    sha256 "7f522bf1e277ae6868aef60299d7d6e65f99fc03850c5bd332b80f845b80533f"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a12a3444d93a6b21e07f6fc9f6ca863e77a0210d88bb28d29d16da449c39a801"
+      url "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1ec2bc54c54079e221a0342390060d3bd6d1ca6216815192ee35f7c06fb60089"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/mrj/releases/download/v0.4.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f7d5b098332bf025055020f4aa3233596a932e8b89406e5c682bb46f0d065f8e"
+      url "https://github.com/dhth/mrj/releases/download/v0.5.0/mrj-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0d0678102faf3757c7d8eee5dba1b74cc8716b6800f99d67329c92dc57d7caa9"
     end
   end
   license "MIT"
@@ -27,7 +21,6 @@ class Mrj < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
@@ -48,7 +41,6 @@ class Mrj < Formula
 
   def install
     bin.install "mrj" if OS.mac? && Hardware::CPU.arm?
-    bin.install "mrj" if OS.mac? && Hardware::CPU.intel?
     bin.install "mrj" if OS.linux? && Hardware::CPU.arm?
     bin.install "mrj" if OS.linux? && Hardware::CPU.intel?
 
