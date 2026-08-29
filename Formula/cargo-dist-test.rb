@@ -1,20 +1,20 @@
 class CargoDistTest < Formula
   desc "just a test repo"
   homepage "https://github.com/dhth/cargo-dist-test"
-  version "0.1.7"
+  version "0.1.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-aarch64-apple-darwin.tar.xz"
-      sha256 "f4d721524fb821465b9c4d3ea89084244e0c29ccd3ad7c6603eeec609275aab1"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.8/cargo-dist-test-aarch64-apple-darwin.tar.xz"
+      sha256 "d21800fe83889b9280682c2acbdf4eda0824aa6731133ea2089934a739b0f71f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-x86_64-apple-darwin.tar.xz"
-      sha256 "5e28779c0f83ab4c2a741fb049a2ffbc4cb1f88811917db17411212ad588f3df"
+      url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.8/cargo-dist-test-x86_64-apple-darwin.tar.xz"
+      sha256 "454c44dcbe801fdf1e41d767f8abc61b5af858cb7fbd6f351f2b5fea06d7e7e1"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.7/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "99ff75a7fd01cd533104f6b8d6152e2117b209cbd83d8ecc6da5b53e9d1cabae"
+    url "https://github.com/dhth/cargo-dist-test/releases/download/v0.1.8/cargo-dist-test-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "f06018277754104c10801a00745f9dec842a35fa6f46bef7a417b5f71c23b051"
   end
 
   BINARY_ALIASES = {
@@ -41,9 +41,15 @@ class CargoDistTest < Formula
   end
 
   def install
-    bin.install "cargo-dist-test" if OS.mac? && Hardware::CPU.arm?
-    bin.install "cargo-dist-test" if OS.mac? && Hardware::CPU.intel?
-    bin.install "cargo-dist-test" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "cargo-dist-test"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "cargo-dist-test"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "cargo-dist-test"
+    end
 
     install_binary_aliases!
 
