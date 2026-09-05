@@ -8,6 +8,11 @@ class Mult < Formula
   version "0.3.0"
   license "MIT"
 
+  disable! date: "2026-09-04",
+           because: "is no longer distributed through Homebrew; download a pre-built binary from " \
+                    "https://github.com/dhth/mult/releases/latest or install it with " \
+                    "`go install github.com/dhth/mult@latest`"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dhth/mult/releases/download/v0.3.0/mult_0.3.0_darwin_amd64.tar.gz"
