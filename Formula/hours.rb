@@ -8,6 +8,11 @@ class Hours < Formula
   version "0.6.0"
   license "MIT"
 
+  disable! date: "2026-09-09",
+           because: "is no longer distributed through Homebrew; download a pre-built binary from " \
+                    "https://github.com/dhth/hours/releases/latest or install it with " \
+                    "`go install github.com/dhth/hours@latest`"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dhth/hours/releases/download/v0.6.0/hours_0.6.0_darwin_amd64.tar.gz"
