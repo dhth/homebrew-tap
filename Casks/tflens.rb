@@ -5,6 +5,11 @@ cask "tflens" do
   homepage "https://github.com/dhth/tflens"
   version "0.1.0-alpha.6"
 
+  disable! date: "2026-09-30",
+           because: "is no longer distributed through Homebrew; download a pre-built binary from " \
+                    "https://github.com/dhth/tflens/releases/latest or install it with " \
+                    "`go install github.com/dhth/tflens@latest`"
+
   livecheck do
     skip "Auto-generated on release."
   end
